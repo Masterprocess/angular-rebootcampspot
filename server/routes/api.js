@@ -47,6 +47,11 @@ router.post('/user', function(res,req){
 		var newUser = new User();
 		newUser.userEmail = req.body.userEmail;
 		newUser.userType = req.body.userType;
+		newUser.save(function(err, insertedUser){
+			if (err){
+				console.log("Error saving new user. Quel dommage.")
+			}
+		});
 });
 
 module.exports = router;
