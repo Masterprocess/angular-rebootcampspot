@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const mongoose = require('mongoose');
-const User = require('../models/video');
+const User = require('../models/user');
 
 const db = "mongodb://rebootcampspotad:j0bsecuritymakesme_sad@ds229415.mlab.com:29415/rebootcampspotdb";
 mongoose.Promise = global.Promise;
@@ -50,8 +50,28 @@ router.post('/user', function(res,req){
 		newUser.save(function(err, insertedUser){
 			if (err){
 				console.log("Error saving new user. Quel dommage.")
+			}else{
+				res.json(insertedUser);
 			}
 		});
+});
+
+router.put('/user/:id', function(req, res){
+	console.log("Update a user profile.");
+	User.findByIdAndUpdate(req.params.id, 
+	{
+			$set: {userID: req.body.id, fullName: req.body.fullName, givenName: req.body.givenName, familyName: req.body.familyName, imageUrl:req.body.imageUrl}
+	},
+	{
+		new: true
+	},
+	function(err, updatedUser){
+		if(err){
+				res.send("Error updating user.");
+		}else{
+				res.json(updatedUser);
+		}
+	});
 });
 
 module.exports = router;
