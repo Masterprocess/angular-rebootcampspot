@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { AdminCenterComponent } from './admin-center/admin-center.component';
 import { StudentCenterComponent } from './student-center/student-center.component';
+import { CalendarComponent } from './calendar/calendar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
 		AdminCenterComponent,
-		StudentCenterComponent
+		StudentCenterComponent,
+		CalendarComponent
   ],
   imports: [
     BrowserModule,
