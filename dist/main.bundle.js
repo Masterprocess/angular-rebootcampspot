@@ -290,14 +290,15 @@ var LoginComponent = (function () {
         });
     };
     LoginComponent.prototype.attachSignin = function (element) {
+        var _this = this;
         this.auth2.attachClickHandler(element, {}, function (googleUser) {
             var profile = googleUser.getBasicProfile();
             localStorage.setItem('token', googleUser.getAuthResponse().id_token);
             localStorage.setItem('img', profile.getImageUrl());
             localStorage.setItem('name', profile.getName());
             localStorage.setItem('email', profile.getEmail());
-            //this.router.navigate(['/home/dash']);
-            window.location.replace("http://localhost:8080/home/dash");
+            _this.router.navigate(['/admin']);
+            //window.location.replace("http://localhost:8080/admin");
         }, function (error) {
             alert(JSON.stringify(error, undefined, 2));
         });
