@@ -8,6 +8,7 @@ import { LoginComponent } from './login/login.component';
 import { AdminCenterComponent } from './admin-center/admin-center.component';
 import { StudentCenterComponent } from './student-center/student-center.component';
 import { CalendarComponent } from './calendar/calendar.component';
+import { SidebarNavComponent } from './sidebar-nav/sidebar-nav.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { CalendarComponent } from './calendar/calendar.component';
     LoginComponent,
 		AdminCenterComponent,
 		StudentCenterComponent,
-		CalendarComponent
+		CalendarComponent,
+		SidebarNavComponent
   ],
   imports: [
     BrowserModule,
