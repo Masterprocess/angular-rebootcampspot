@@ -86,7 +86,8 @@ AdminCenterComponent = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__admin_center_admin_center_component__ = __webpack_require__("../../../../../src/app/admin-center/admin-center.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__login_login_component__ = __webpack_require__("../../../../../src/app/login/login.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__student_center_student_center_component__ = __webpack_require__("../../../../../src/app/student-center/student-center.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__login_login_component__ = __webpack_require__("../../../../../src/app/login/login.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -97,10 +98,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
 var routes = [
     { path: '', redirectTo: '/login', pathMatch: 'full' },
-    { path: 'login', component: __WEBPACK_IMPORTED_MODULE_3__login_login_component__["a" /* LoginComponent */] },
-    { path: 'admin', component: __WEBPACK_IMPORTED_MODULE_2__admin_center_admin_center_component__["a" /* AdminCenterComponent */] }
+    { path: 'login', component: __WEBPACK_IMPORTED_MODULE_4__login_login_component__["a" /* LoginComponent */] },
+    { path: 'admin', component: __WEBPACK_IMPORTED_MODULE_2__admin_center_admin_center_component__["a" /* AdminCenterComponent */] },
+    { path: 'student', component: __WEBPACK_IMPORTED_MODULE_3__student_center_student_center_component__["a" /* StudentCenterComponent */] }
 ];
 var AppRoutingModule = (function () {
     function AppRoutingModule() {
@@ -186,12 +189,22 @@ AppComponent = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__login_login_component__ = __webpack_require__("../../../../../src/app/login/login.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__admin_center_admin_center_component__ = __webpack_require__("../../../../../src/app/admin-center/admin-center.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__student_center_student_center_component__ = __webpack_require__("../../../../../src/app/student-center/student-center.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__calendar_calendar_component__ = __webpack_require__("../../../../../src/app/calendar/calendar.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__sidebar_nav_sidebar_nav_component__ = __webpack_require__("../../../../../src/app/sidebar-nav/sidebar-nav.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__sidebar_nav_collapsed_sidebar_nav_collapsed_component__ = __webpack_require__("../../../../../src/app/sidebar-nav-collapsed/sidebar-nav-collapsed.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__student_creation_student_creation_component__ = __webpack_require__("../../../../../src/app/student-creation/student-creation.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
+
+
+
 
 
 
@@ -209,7 +222,12 @@ AppModule = __decorate([
         declarations: [
             __WEBPACK_IMPORTED_MODULE_4__app_component__["a" /* AppComponent */],
             __WEBPACK_IMPORTED_MODULE_5__login_login_component__["a" /* LoginComponent */],
-            __WEBPACK_IMPORTED_MODULE_6__admin_center_admin_center_component__["a" /* AdminCenterComponent */]
+            __WEBPACK_IMPORTED_MODULE_6__admin_center_admin_center_component__["a" /* AdminCenterComponent */],
+            __WEBPACK_IMPORTED_MODULE_7__student_center_student_center_component__["a" /* StudentCenterComponent */],
+            __WEBPACK_IMPORTED_MODULE_8__calendar_calendar_component__["a" /* CalendarComponent */],
+            __WEBPACK_IMPORTED_MODULE_9__sidebar_nav_sidebar_nav_component__["a" /* SidebarNavComponent */],
+            __WEBPACK_IMPORTED_MODULE_10__sidebar_nav_collapsed_sidebar_nav_collapsed_component__["a" /* SidebarNavCollapsedComponent */],
+            __WEBPACK_IMPORTED_MODULE_11__student_creation_student_creation_component__["a" /* StudentCreationComponent */]
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
@@ -222,6 +240,67 @@ AppModule = __decorate([
 ], AppModule);
 
 //# sourceMappingURL=app.module.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/calendar/calendar.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/calendar/calendar.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<p>\n  calendar works!\n</p>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/calendar/calendar.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CalendarComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var CalendarComponent = (function () {
+    function CalendarComponent() {
+    }
+    CalendarComponent.prototype.ngOnInit = function () {
+    };
+    return CalendarComponent;
+}());
+CalendarComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+        selector: 'app-calendar',
+        template: __webpack_require__("../../../../../src/app/calendar/calendar.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/calendar/calendar.component.css")]
+    }),
+    __metadata("design:paramtypes", [])
+], CalendarComponent);
+
+//# sourceMappingURL=calendar.component.js.map
 
 /***/ }),
 
@@ -320,6 +399,250 @@ LoginComponent = __decorate([
 
 var _a, _b;
 //# sourceMappingURL=login.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/sidebar-nav-collapsed/sidebar-nav-collapsed.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/sidebar-nav-collapsed/sidebar-nav-collapsed.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<p>\n  sidebar-nav-collapsed works!\n</p>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/sidebar-nav-collapsed/sidebar-nav-collapsed.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SidebarNavCollapsedComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var SidebarNavCollapsedComponent = (function () {
+    function SidebarNavCollapsedComponent() {
+    }
+    SidebarNavCollapsedComponent.prototype.ngOnInit = function () {
+    };
+    return SidebarNavCollapsedComponent;
+}());
+SidebarNavCollapsedComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+        selector: 'app-sidebar-nav-collapsed',
+        template: __webpack_require__("../../../../../src/app/sidebar-nav-collapsed/sidebar-nav-collapsed.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/sidebar-nav-collapsed/sidebar-nav-collapsed.component.css")]
+    }),
+    __metadata("design:paramtypes", [])
+], SidebarNavCollapsedComponent);
+
+//# sourceMappingURL=sidebar-nav-collapsed.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/sidebar-nav/sidebar-nav.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/sidebar-nav/sidebar-nav.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<p>\n  sidebar-nav works!\n</p>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/sidebar-nav/sidebar-nav.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SidebarNavComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var SidebarNavComponent = (function () {
+    function SidebarNavComponent() {
+    }
+    SidebarNavComponent.prototype.ngOnInit = function () {
+    };
+    return SidebarNavComponent;
+}());
+SidebarNavComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+        selector: 'app-sidebar-nav',
+        template: __webpack_require__("../../../../../src/app/sidebar-nav/sidebar-nav.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/sidebar-nav/sidebar-nav.component.css")]
+    }),
+    __metadata("design:paramtypes", [])
+], SidebarNavComponent);
+
+//# sourceMappingURL=sidebar-nav.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/student-center/student-center.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/student-center/student-center.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<p>\n  student-center works!\n</p>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/student-center/student-center.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return StudentCenterComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var StudentCenterComponent = (function () {
+    function StudentCenterComponent() {
+    }
+    StudentCenterComponent.prototype.ngOnInit = function () {
+    };
+    return StudentCenterComponent;
+}());
+StudentCenterComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+        selector: 'app-student-center',
+        template: __webpack_require__("../../../../../src/app/student-center/student-center.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/student-center/student-center.component.css")]
+    }),
+    __metadata("design:paramtypes", [])
+], StudentCenterComponent);
+
+//# sourceMappingURL=student-center.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/student-creation/student-creation.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/student-creation/student-creation.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<p>\n  student-creation works!\n</p>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/student-creation/student-creation.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return StudentCreationComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var StudentCreationComponent = (function () {
+    function StudentCreationComponent() {
+    }
+    StudentCreationComponent.prototype.ngOnInit = function () {
+    };
+    return StudentCreationComponent;
+}());
+StudentCreationComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+        selector: 'app-student-creation',
+        template: __webpack_require__("../../../../../src/app/student-creation/student-creation.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/student-creation/student-creation.component.css")]
+    }),
+    __metadata("design:paramtypes", [])
+], StudentCreationComponent);
+
+//# sourceMappingURL=student-creation.component.js.map
 
 /***/ }),
 

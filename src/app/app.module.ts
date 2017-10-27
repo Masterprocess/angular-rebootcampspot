@@ -9,6 +9,8 @@ import { AdminCenterComponent } from './admin-center/admin-center.component';
 import { StudentCenterComponent } from './student-center/student-center.component';
 import { CalendarComponent } from './calendar/calendar.component';
 import { SidebarNavComponent } from './sidebar-nav/sidebar-nav.component';
+import { SidebarNavCollapsedComponent } from './sidebar-nav-collapsed/sidebar-nav-collapsed.component';
+import { StudentCreationComponent } from './student-creation/student-creation.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { SidebarNavComponent } from './sidebar-nav/sidebar-nav.component';
 		AdminCenterComponent,
 		StudentCenterComponent,
 		CalendarComponent,
-		SidebarNavComponent
+		SidebarNavComponent,
+		SidebarNavCollapsedComponent,
+		StudentCreationComponent
   ],
   imports: [
     BrowserModule,
