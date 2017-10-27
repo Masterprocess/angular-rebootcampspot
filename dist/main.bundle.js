@@ -325,7 +325,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/login/login.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\n<section class=\"login\">\n\t<div class=\"container\">\n\t\t\t<div class=\"col-md-8\">\n\t\t\t\t<H2>Welcome to rebootcampspot!</H2>\n\t\t\t</div>\n\n\t\t\t <div class=\"col-md-4\">\n\t\t\t\t\t\t<div class=\"wrapper\">\n\t\t\t\t\n\n\t\t\t\t\t\t<div class=\"login-panel panel panel-default\">\n\t\t\t<div class=\"panel-heading\">\n\t\t\t\t<h4>Sign In</h4>\n\t\t\t</div>\n\t\t\t<div class=\"panel-body\">\n\t\t\t\t\n\t\t\t\t\t<div   id=\"googleBtn\" class=\"g-signin2\"></div>\n\t\t\t\t</div>\n\n\n\t\t</div>\n\t\t\t\t\t </div>\n\t\t\t </div>\n\t\t</div>\n</section>"
+module.exports = "\n  <div class=\"section grey lighten-3\">\n    <div class=\"row container\">\n      <h2 class=\"header\">ReBootcampSpot</h2>\n\t  <p class=\"grey-text text-darken-3 lighten-3\">A better bootcampspot, for both students and administrators</p>\n\t  </div>\n\t <div class=\"container align-center\"> \n\t  <h5>Sign In</h5>\t\t\t\n\t  <div   id=\"googleBtn\" class=\"g-signin2\"></div>\n    </div>\n  </div>\n"
 
 /***/ }),
 

@@ -1,6 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 import { MaterializeModule } from 'angular2-materialize';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CalendarModule } from 'angular-calendar';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -24,9 +28,13 @@ import { StudentCreationComponent } from './student-creation/student-creation.co
 		StudentCreationComponent
   ],
   imports: [
-    BrowserModule,
+		BrowserModule,
+		FormsModule,
+    HttpModule,
 		AppRoutingModule,
-		MaterializeModule
+		MaterializeModule,
+		BrowserAnimationsModule,
+    CalendarModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
