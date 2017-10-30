@@ -19,6 +19,8 @@ import { StudentCreationComponent } from './student-creation/student-creation.co
 import { SidebarModule } from 'ng-sidebar';
 
 import { ClassCreationComponent } from './class-creation/class-creation.component';
+import { ClassListComponent } from './class-list/class-list.component';
+import { HomeworkListComponent } from './homework-list/homework-list.component';
 
 
 @NgModule({
@@ -31,7 +33,9 @@ import { ClassCreationComponent } from './class-creation/class-creation.componen
 		SidebarNavComponent,
 		SidebarNavCollapsedComponent,
 		StudentCreationComponent,
-		ClassCreationComponent
+		ClassCreationComponent,
+		ClassListComponent,
+		HomeworkListComponent
 
   ],
   imports: [
