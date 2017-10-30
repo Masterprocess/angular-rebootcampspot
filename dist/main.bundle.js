@@ -38,7 +38,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/admin-center/admin-center.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  admin-center works!\n</p>\n"
+module.exports = ""
 
 /***/ }),
 
@@ -88,6 +88,7 @@ AdminCenterComponent = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__admin_center_admin_center_component__ = __webpack_require__("../../../../../src/app/admin-center/admin-center.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__student_center_student_center_component__ = __webpack_require__("../../../../../src/app/student-center/student-center.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__login_login_component__ = __webpack_require__("../../../../../src/app/login/login.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__student_creation_student_creation_component__ = __webpack_require__("../../../../../src/app/student-creation/student-creation.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -99,11 +100,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
 var routes = [
     { path: '', redirectTo: '/login', pathMatch: 'full' },
     { path: 'login', component: __WEBPACK_IMPORTED_MODULE_4__login_login_component__["a" /* LoginComponent */] },
     { path: 'admin', component: __WEBPACK_IMPORTED_MODULE_2__admin_center_admin_center_component__["a" /* AdminCenterComponent */] },
-    { path: 'student', component: __WEBPACK_IMPORTED_MODULE_3__student_center_student_center_component__["a" /* StudentCenterComponent */] }
+    { path: 'student', component: __WEBPACK_IMPORTED_MODULE_3__student_center_student_center_component__["a" /* StudentCenterComponent */] },
+    { path: 'buildstudent', component: __WEBPACK_IMPORTED_MODULE_5__student_creation_student_creation_component__["a" /* StudentCreationComponent */] }
 ];
 var AppRoutingModule = (function () {
     function AppRoutingModule() {
@@ -184,22 +187,30 @@ AppComponent = __decorate([
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__("../../../platform-browser/@angular/platform-browser.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angular2_materialize__ = __webpack_require__("../../../../angular2-materialize/dist/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_routing_module__ = __webpack_require__("../../../../../src/app/app-routing.module.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__login_login_component__ = __webpack_require__("../../../../../src/app/login/login.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__admin_center_admin_center_component__ = __webpack_require__("../../../../../src/app/admin-center/admin-center.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__student_center_student_center_component__ = __webpack_require__("../../../../../src/app/student-center/student-center.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__calendar_calendar_component__ = __webpack_require__("../../../../../src/app/calendar/calendar.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__sidebar_nav_sidebar_nav_component__ = __webpack_require__("../../../../../src/app/sidebar-nav/sidebar-nav.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__sidebar_nav_collapsed_sidebar_nav_collapsed_component__ = __webpack_require__("../../../../../src/app/sidebar-nav-collapsed/sidebar-nav-collapsed.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__student_creation_student_creation_component__ = __webpack_require__("../../../../../src/app/student-creation/student-creation.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular2_materialize__ = __webpack_require__("../../../../angular2-materialize/dist/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_platform_browser_animations__ = __webpack_require__("../../../platform-browser/@angular/platform-browser/animations.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_angular_calendar__ = __webpack_require__("../../../../angular-calendar/dist/esm/src/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__app_routing_module__ = __webpack_require__("../../../../../src/app/app-routing.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__login_login_component__ = __webpack_require__("../../../../../src/app/login/login.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__admin_center_admin_center_component__ = __webpack_require__("../../../../../src/app/admin-center/admin-center.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__student_center_student_center_component__ = __webpack_require__("../../../../../src/app/student-center/student-center.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__calendar_calendar_component__ = __webpack_require__("../../../../../src/app/calendar/calendar.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__sidebar_nav_sidebar_nav_component__ = __webpack_require__("../../../../../src/app/sidebar-nav/sidebar-nav.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__sidebar_nav_collapsed_sidebar_nav_collapsed_component__ = __webpack_require__("../../../../../src/app/sidebar-nav-collapsed/sidebar-nav-collapsed.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__student_creation_student_creation_component__ = __webpack_require__("../../../../../src/app/student-creation/student-creation.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
+
+
 
 
 
@@ -220,22 +231,26 @@ var AppModule = (function () {
 AppModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["M" /* NgModule */])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_4__app_component__["a" /* AppComponent */],
-            __WEBPACK_IMPORTED_MODULE_5__login_login_component__["a" /* LoginComponent */],
-            __WEBPACK_IMPORTED_MODULE_6__admin_center_admin_center_component__["a" /* AdminCenterComponent */],
-            __WEBPACK_IMPORTED_MODULE_7__student_center_student_center_component__["a" /* StudentCenterComponent */],
-            __WEBPACK_IMPORTED_MODULE_8__calendar_calendar_component__["a" /* CalendarComponent */],
-            __WEBPACK_IMPORTED_MODULE_9__sidebar_nav_sidebar_nav_component__["a" /* SidebarNavComponent */],
-            __WEBPACK_IMPORTED_MODULE_10__sidebar_nav_collapsed_sidebar_nav_collapsed_component__["a" /* SidebarNavCollapsedComponent */],
-            __WEBPACK_IMPORTED_MODULE_11__student_creation_student_creation_component__["a" /* StudentCreationComponent */]
+            __WEBPACK_IMPORTED_MODULE_8__app_component__["a" /* AppComponent */],
+            __WEBPACK_IMPORTED_MODULE_9__login_login_component__["a" /* LoginComponent */],
+            __WEBPACK_IMPORTED_MODULE_10__admin_center_admin_center_component__["a" /* AdminCenterComponent */],
+            __WEBPACK_IMPORTED_MODULE_11__student_center_student_center_component__["a" /* StudentCenterComponent */],
+            __WEBPACK_IMPORTED_MODULE_12__calendar_calendar_component__["a" /* CalendarComponent */],
+            __WEBPACK_IMPORTED_MODULE_13__sidebar_nav_sidebar_nav_component__["a" /* SidebarNavComponent */],
+            __WEBPACK_IMPORTED_MODULE_14__sidebar_nav_collapsed_sidebar_nav_collapsed_component__["a" /* SidebarNavCollapsedComponent */],
+            __WEBPACK_IMPORTED_MODULE_15__student_creation_student_creation_component__["a" /* StudentCreationComponent */]
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
-            __WEBPACK_IMPORTED_MODULE_3__app_routing_module__["a" /* AppRoutingModule */],
-            __WEBPACK_IMPORTED_MODULE_2_angular2_materialize__["a" /* MaterializeModule */]
+            __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormsModule */],
+            __WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* HttpModule */],
+            __WEBPACK_IMPORTED_MODULE_7__app_routing_module__["a" /* AppRoutingModule */],
+            __WEBPACK_IMPORTED_MODULE_4_angular2_materialize__["a" /* MaterializeModule */],
+            __WEBPACK_IMPORTED_MODULE_5__angular_platform_browser_animations__["a" /* BrowserAnimationsModule */],
+            __WEBPACK_IMPORTED_MODULE_6_angular_calendar__["a" /* CalendarModule */].forRoot()
         ],
         providers: [],
-        bootstrap: [__WEBPACK_IMPORTED_MODULE_4__app_component__["a" /* AppComponent */]]
+        bootstrap: [__WEBPACK_IMPORTED_MODULE_8__app_component__["a" /* AppComponent */]]
     })
 ], AppModule);
 
@@ -264,7 +279,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/calendar/calendar.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  calendar works!\n</p>\n"
+module.exports = "<mwl-calendar-month-view\n[viewDate]=\"viewDate\"\n[events]=\"events\">\n</mwl-calendar-month-view>"
 
 /***/ }),
 
@@ -286,6 +301,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 var CalendarComponent = (function () {
     function CalendarComponent() {
+        this.viewDate = new Date();
+        this.events = [];
     }
     CalendarComponent.prototype.ngOnInit = function () {
     };
@@ -484,7 +501,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/sidebar-nav/sidebar-nav.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  sidebar-nav works!\n</p>\n"
+module.exports = ""
 
 /***/ }),
 
@@ -606,7 +623,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/student-creation/student-creation.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  student-creation works!\n</p>\n"
+module.exports = "<div class=\"container\">\n\t<div class=\"row\">\n\t\t\t<form class=\"col s12\">\n\n\t\t\t\t<div class=\"row\">\n\t\t\t\t\t<div class=\"input-field col s6\">\n\t\t\t\t\t\t\t<i class=\"material-icons prefix\">account_circle</i>\n\t\t\t\t\t\t<input placeholder=\"Placeholder\" id=\"first_name\" type=\"text\" class=\"validate\" [(ngModel)]=\"user.fname\">\n\t\t\t\t\t\t<label for=\"first_name\">First Name</label>\n\t\t\t\t\t</div>\n\t\t\t\t\t\n\t\t\t\t\t<div class=\"input-field col s6\">\n\t\t\t\t\t\t<input id=\"last_name\" type=\"text\" class=\"validate\" [(ngModel)]=\"user.lname\">\n\t\t\t\t\t\t<label for=\"last_name\">Last Name</label>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t\n\t\t\t\t<div class=\"row\">\n\t\t\t\t\t<div class=\"input-field col s12\">\n\t\t\t\t\t\t<i class=\"material-icons prefix\">email</i>\n\t\t\t\t\t\t<input id=\"email\" type=\"email\" class=\"validate\" [(ngModel)]=\"user.email\">\n\t\t\t\t\t\t<label for=\"email\">Email</label>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\n\t\t\t\t<p>\n\t\t\t\t\t\t<input name=\"group1\" type=\"radio\" id=\"test1\" [(ngModel)]=\"user.utype\"/>\n\t\t\t\t\t\t<label for=\"test1\">Admin</label>\n\t\t\t\t\t</p>\n\t\t\t\t\t<p>\n\t\t\t\t\t\t<input name=\"group1\" type=\"radio\" id=\"test2\" [(ngModel)]=\"user.utype\"/>\n\t\t\t\t\t\t<label for=\"test2\">Teacher</label>\n\t\t\t\t\t</p>\n\t\t\t\t\t<p>\n\t\t\t\t\t\t<input class=\"with-gap\" name=\"group1\" type=\"radio\" id=\"test3\"  [(ngModel)]=\"user.utype\"/>\n\t\t\t\t\t\t<label for=\"test3\">Student</label>\n\t\t\t\t\t</p>\n\n\t\t\t</form>\n\n\t</div>\n</div>"
 
 /***/ }),
 
