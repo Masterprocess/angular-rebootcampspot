@@ -38,7 +38,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/admin-center/admin-center.component.html":
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = "<p>admin center works!</p>"
 
 /***/ }),
 
@@ -66,7 +66,7 @@ var AdminCenterComponent = (function () {
     return AdminCenterComponent;
 }());
 AdminCenterComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-admin-center',
         template: __webpack_require__("../../../../../src/app/admin-center/admin-center.component.html"),
         styles: [__webpack_require__("../../../../../src/app/admin-center/admin-center.component.css")]
@@ -114,7 +114,7 @@ var AppRoutingModule = (function () {
     return AppRoutingModule;
 }());
 AppRoutingModule = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* NgModule */])({
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
         imports: [__WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* RouterModule */].forRoot(routes)],
         exports: [__WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* RouterModule */]]
     })
@@ -132,7 +132,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, "ng-sidebar-container {\n    height: 100vh;\n}", ""]);
 
 // exports
 
@@ -145,7 +145,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\n<router-outlet></router-outlet>\n"
+module.exports = "<ng-sidebar-container>\n  <ng-sidebar\n    [(opened)]=\"_opened\"\n    [mode]=\"_MODES[_modeNum]\"\n    [keyClose]=\"_keyClose\"\n    [position]=\"_POSITIONS[_positionNum]\"\n    [dock]=\"_dock\"\n    [dockedSize]=\"'50px'\"\n    [autoCollapseHeight]=\"_autoCollapseHeight\"\n    [autoCollapseWidth]=\"_autoCollapseWidth\"\n    [closeOnClickOutside]=\"_closeOnClickOutside\"\n    [closeOnClickBackdrop]=\"_closeOnClickBackdrop\"\n    [showBackdrop]=\"_showBackdrop\"\n    [animate]=\"_animate\"\n    [trapFocus]=\"_trapFocus\"\n    [autoFocus]=\"_autoFocus\"\n    [sidebarClass]=\"'demo-sidebar'\"\n    [ariaLabel]=\"'My sidebar'\"\n    (onOpenStart)=\"_onOpenStart()\"\n    (onOpened)=\"_onOpened()\"\n    (onCloseStart)=\"_onCloseStart()\"\n    (onClosed)=\"_onClosed()\">\n    <p>Sidebar contents</p>\n    <button class=\"demo-control\" (click)=\"_toggleOpened()\">Close sidebar</button>\n    <p><a closeSidebar>This will close the sidebar too</a></p>\n</ng-sidebar>\n<div ng-sidebar-content>\n        <header class=\"demo-header\">\n          <button (click)=\"_toggleOpened()\" class=\"demo-header__toggle\">Toggle sidebar</button>\n          <span>ng-sidebar</span>\n        </header>\n        <section class=\"demo-contents\">\n          <h1>Options</h1>\n          <h2>Sidebar</h2>\n          <div>\n            <button class=\"demo-control\" (click)=\"_toggleOpened()\">opened ({{_opened}})</button>\n            <button class=\"demo-control\" (click)=\"_toggleMode()\">mode ({{_MODES[_modeNum]}})</button>\n            <button class=\"demo-control\" (click)=\"_togglePosition()\">position ({{_POSITIONS[_positionNum]}})</button>\n            <button class=\"demo-control\" (click)=\"_toggleDock()\">dock ({{_dock}})</button>\n          </div>\n          <div>\n            <button class=\"demo-control\" (click)=\"_toggleAutoCollapseHeight()\">Auto collapse at 500px height ({{_autoCollapseHeight ? 'true' : 'false'}})</button>\n            <button class=\"demo-control\" (click)=\"_toggleAutoCollapseWidth()\">Auto collapse at 500px width ({{_autoCollapseWidth ? 'true' : 'false'}})</button>\n          </div>\n          <div>\n            <button class=\"demo-control\" (click)=\"_toggleCloseOnClickOutside()\">closeOnClickOutside ({{_closeOnClickOutside}})</button>\n            <button class=\"demo-control\" (click)=\"_toggleCloseOnClickBackdrop()\">closeOnClickBackdrop ({{_closeOnClickBackdrop}})</button>\n            <button class=\"demo-control\" (click)=\"_toggleShowBackdrop()\">showBackdrop ({{_showBackdrop}})</button>\n            <button class=\"demo-control\" (click)=\"_toggleAnimate()\">animate ({{_animate}})</button>\n          </div>\n          <div>\n            <button class=\"demo-control\" (click)=\"_toggleTrapFocus()\">trapFocus ({{_trapFocus}})</button>\n            <button class=\"demo-control\" (click)=\"_toggleAutoFocus()\">autoFocus ({{_autoFocus}})</button>\n            <button class=\"demo-control\" (click)=\"_toggleKeyClose()\">keyClose ({{_keyClose}})</button>\n          </div>\n        </section>\n      </div>\n</ng-sidebar-container>\n\n<router-outlet></router-outlet>\n"
 
 /***/ }),
 
@@ -165,11 +165,83 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var AppComponent = (function () {
     function AppComponent() {
         this.title = 'app';
+        this._opened = true;
+        this._modeNum = 0;
+        this._positionNum = 0;
+        this._dock = true;
+        this._closeOnClickOutside = false;
+        this._closeOnClickBackdrop = false;
+        this._showBackdrop = false;
+        this._animate = true;
+        this._trapFocus = true;
+        this._autoFocus = true;
+        this._keyClose = false;
+        this._autoCollapseHeight = null;
+        this._autoCollapseWidth = null;
+        this._MODES = ['over', 'push', 'slide'];
+        this._POSITIONS = ['left', 'right', 'top', 'bottom'];
     }
+    AppComponent.prototype._toggleOpened = function () {
+        this._opened = !this._opened;
+    };
+    AppComponent.prototype._toggleMode = function () {
+        this._modeNum++;
+        if (this._modeNum === this._MODES.length) {
+            this._modeNum = 0;
+        }
+    };
+    AppComponent.prototype._toggleAutoCollapseHeight = function () {
+        this._autoCollapseHeight = this._autoCollapseHeight ? null : 500;
+    };
+    AppComponent.prototype._toggleAutoCollapseWidth = function () {
+        this._autoCollapseWidth = this._autoCollapseWidth ? null : 500;
+    };
+    AppComponent.prototype._togglePosition = function () {
+        this._positionNum++;
+        if (this._positionNum === this._POSITIONS.length) {
+            this._positionNum = 0;
+        }
+    };
+    AppComponent.prototype._toggleDock = function () {
+        this._dock = !this._dock;
+    };
+    AppComponent.prototype._toggleCloseOnClickOutside = function () {
+        this._closeOnClickOutside = !this._closeOnClickOutside;
+    };
+    AppComponent.prototype._toggleCloseOnClickBackdrop = function () {
+        this._closeOnClickBackdrop = !this._closeOnClickBackdrop;
+    };
+    AppComponent.prototype._toggleShowBackdrop = function () {
+        this._showBackdrop = !this._showBackdrop;
+    };
+    AppComponent.prototype._toggleAnimate = function () {
+        this._animate = !this._animate;
+    };
+    AppComponent.prototype._toggleTrapFocus = function () {
+        this._trapFocus = !this._trapFocus;
+    };
+    AppComponent.prototype._toggleAutoFocus = function () {
+        this._autoFocus = !this._autoFocus;
+    };
+    AppComponent.prototype._toggleKeyClose = function () {
+        this._keyClose = !this._keyClose;
+    };
+    AppComponent.prototype._onOpenStart = function () {
+        console.info('Sidebar opening');
+    };
+    AppComponent.prototype._onOpened = function () {
+        console.info('Sidebar opened');
+    };
+    AppComponent.prototype._onCloseStart = function () {
+        console.info('Sidebar closing');
+    };
+    AppComponent.prototype._onClosed = function () {
+        console.info('Sidebar closed');
+    };
     return AppComponent;
 }());
 AppComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-root',
         template: __webpack_require__("../../../../../src/app/app.component.html"),
         styles: [__webpack_require__("../../../../../src/app/app.component.css")]
@@ -201,6 +273,9 @@ AppComponent = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__sidebar_nav_sidebar_nav_component__ = __webpack_require__("../../../../../src/app/sidebar-nav/sidebar-nav.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__sidebar_nav_collapsed_sidebar_nav_collapsed_component__ = __webpack_require__("../../../../../src/app/sidebar-nav-collapsed/sidebar-nav-collapsed.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__student_creation_student_creation_component__ = __webpack_require__("../../../../../src/app/student-creation/student-creation.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16_ng_sidebar__ = __webpack_require__("../../../../ng-sidebar/lib/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16_ng_sidebar___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_16_ng_sidebar__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__class_creation_class_creation_component__ = __webpack_require__("../../../../../src/app/class-creation/class-creation.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -223,13 +298,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
+
 var AppModule = (function () {
     function AppModule() {
     }
     return AppModule;
 }());
 AppModule = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["M" /* NgModule */])({
+    Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModule"])({
         declarations: [
             __WEBPACK_IMPORTED_MODULE_8__app_component__["a" /* AppComponent */],
             __WEBPACK_IMPORTED_MODULE_9__login_login_component__["a" /* LoginComponent */],
@@ -238,7 +315,8 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_12__calendar_calendar_component__["a" /* CalendarComponent */],
             __WEBPACK_IMPORTED_MODULE_13__sidebar_nav_sidebar_nav_component__["a" /* SidebarNavComponent */],
             __WEBPACK_IMPORTED_MODULE_14__sidebar_nav_collapsed_sidebar_nav_collapsed_component__["a" /* SidebarNavCollapsedComponent */],
-            __WEBPACK_IMPORTED_MODULE_15__student_creation_student_creation_component__["a" /* StudentCreationComponent */]
+            __WEBPACK_IMPORTED_MODULE_15__student_creation_student_creation_component__["a" /* StudentCreationComponent */],
+            __WEBPACK_IMPORTED_MODULE_17__class_creation_class_creation_component__["a" /* ClassCreationComponent */]
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
@@ -247,7 +325,8 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_7__app_routing_module__["a" /* AppRoutingModule */],
             __WEBPACK_IMPORTED_MODULE_4_angular2_materialize__["a" /* MaterializeModule */],
             __WEBPACK_IMPORTED_MODULE_5__angular_platform_browser_animations__["a" /* BrowserAnimationsModule */],
-            __WEBPACK_IMPORTED_MODULE_6_angular_calendar__["a" /* CalendarModule */].forRoot()
+            __WEBPACK_IMPORTED_MODULE_6_angular_calendar__["a" /* CalendarModule */].forRoot(),
+            __WEBPACK_IMPORTED_MODULE_16_ng_sidebar__["SidebarModule"].forRoot()
         ],
         providers: [],
         bootstrap: [__WEBPACK_IMPORTED_MODULE_8__app_component__["a" /* AppComponent */]]
@@ -309,7 +388,7 @@ var CalendarComponent = (function () {
     return CalendarComponent;
 }());
 CalendarComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-calendar',
         template: __webpack_require__("../../../../../src/app/calendar/calendar.component.html"),
         styles: [__webpack_require__("../../../../../src/app/calendar/calendar.component.css")]
@@ -318,6 +397,67 @@ CalendarComponent = __decorate([
 ], CalendarComponent);
 
 //# sourceMappingURL=calendar.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/class-creation/class-creation.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/class-creation/class-creation.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"container\">\n\t<div class=\"row\"><div class=\"col s12\"><h1>Create a class!</h1></div></div>\n\t<div class=\"row\">\n\t\t\t<form class=\"col s12\">\n\n\t\t\t\t<div class=\"row\">\n\t\t\t\t\t<div class=\"input-field col s6\">\n\t\t\t\t\t\t\t<i class=\"material-icons prefix\">account_circle</i>\n\t\t\t\t\t\t<input id=\"first_name\" type=\"text\" class=\"validate\" required [(ngModel)]=\"user.fname\">\n\t\t\t\t\t\t<label for=\"first_name\">First Name</label>\n\t\t\t\t\t</div>\n\t\t\t\t\t\n\t\t\t\t\t<div class=\"input-field col s6\">\n\t\t\t\t\t\t<input id=\"last_name\" type=\"text\" class=\"validate\" required [(ngModel)]=\"user.lname\">\n\t\t\t\t\t\t<label for=\"last_name\">Last Name</label>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t\n\t\t\t\t<div class=\"row\">\n\t\t\t\t\t<div class=\"input-field col s12\">\n\t\t\t\t\t\t<i class=\"material-icons prefix\">email</i>\n\t\t\t\t\t\t<input id=\"email\" type=\"email\" class=\"validate\" required [(ngModel)]=\"user.email\">\n\t\t\t\t\t\t<label for=\"email\">Email</label>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\n\t\t\t\t<p>\n\t\t\t\t\t\t<input name=\"group1\" type=\"radio\" id=\"test1\" required [(ngModel)]=\"user.utype\" value=\"admin\"/>\n\t\t\t\t\t\t<label for=\"test1\">Admin</label>\n\t\t\t\t\t</p>\n\t\t\t\t\t<p>\n\t\t\t\t\t\t<input name=\"group1\" type=\"radio\" id=\"test2\" required [(ngModel)]=\"user.utype\" value=\"teacher\"/>\n\t\t\t\t\t\t<label for=\"test2\">Teacher</label>\n\t\t\t\t\t</p>\n\t\t\t\t\t<p>\n\t\t\t\t\t\t<input class=\"with-gap\" name=\"group1\" type=\"radio\" id=\"test3\" required [(ngModel)]=\"user.utype\" value=\"student\"/>\n\t\t\t\t\t\t<label for=\"test3\">Student</label>\n\t\t\t\t\t</p>\n\n\t\t\t</form>\n\n\t</div>\n</div>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/class-creation/class-creation.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ClassCreationComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var ClassCreationComponent = (function () {
+    function ClassCreationComponent() {
+    }
+    ClassCreationComponent.prototype.ngOnInit = function () {
+    };
+    return ClassCreationComponent;
+}());
+ClassCreationComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-class-creation',
+        template: __webpack_require__("../../../../../src/app/class-creation/class-creation.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/class-creation/class-creation.component.css")]
+    }),
+    __metadata("design:paramtypes", [])
+], ClassCreationComponent);
+
+//# sourceMappingURL=class-creation.component.js.map
 
 /***/ }),
 
@@ -405,7 +545,7 @@ var LoginComponent = (function () {
     return LoginComponent;
 }());
 LoginComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-login',
         template: __webpack_require__("../../../../../src/app/login/login.component.html"),
         styles: [__webpack_require__("../../../../../src/app/login/login.component.css")],
@@ -468,7 +608,7 @@ var SidebarNavCollapsedComponent = (function () {
     return SidebarNavCollapsedComponent;
 }());
 SidebarNavCollapsedComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-sidebar-nav-collapsed',
         template: __webpack_require__("../../../../../src/app/sidebar-nav-collapsed/sidebar-nav-collapsed.component.html"),
         styles: [__webpack_require__("../../../../../src/app/sidebar-nav-collapsed/sidebar-nav-collapsed.component.css")]
@@ -529,7 +669,7 @@ var SidebarNavComponent = (function () {
     return SidebarNavComponent;
 }());
 SidebarNavComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-sidebar-nav',
         template: __webpack_require__("../../../../../src/app/sidebar-nav/sidebar-nav.component.html"),
         styles: [__webpack_require__("../../../../../src/app/sidebar-nav/sidebar-nav.component.css")]
@@ -590,7 +730,7 @@ var StudentCenterComponent = (function () {
     return StudentCenterComponent;
 }());
 StudentCenterComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-student-center',
         template: __webpack_require__("../../../../../src/app/student-center/student-center.component.html"),
         styles: [__webpack_require__("../../../../../src/app/student-center/student-center.component.css")]
@@ -623,7 +763,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/student-creation/student-creation.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\n\t<div class=\"row\">\n\t\t\t<form class=\"col s12\">\n\n\t\t\t\t<div class=\"row\">\n\t\t\t\t\t<div class=\"input-field col s6\">\n\t\t\t\t\t\t\t<i class=\"material-icons prefix\">account_circle</i>\n\t\t\t\t\t\t<input placeholder=\"Placeholder\" id=\"first_name\" type=\"text\" class=\"validate\" [(ngModel)]=\"user.fname\">\n\t\t\t\t\t\t<label for=\"first_name\">First Name</label>\n\t\t\t\t\t</div>\n\t\t\t\t\t\n\t\t\t\t\t<div class=\"input-field col s6\">\n\t\t\t\t\t\t<input id=\"last_name\" type=\"text\" class=\"validate\" [(ngModel)]=\"user.lname\">\n\t\t\t\t\t\t<label for=\"last_name\">Last Name</label>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t\n\t\t\t\t<div class=\"row\">\n\t\t\t\t\t<div class=\"input-field col s12\">\n\t\t\t\t\t\t<i class=\"material-icons prefix\">email</i>\n\t\t\t\t\t\t<input id=\"email\" type=\"email\" class=\"validate\" [(ngModel)]=\"user.email\">\n\t\t\t\t\t\t<label for=\"email\">Email</label>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\n\t\t\t\t<p>\n\t\t\t\t\t\t<input name=\"group1\" type=\"radio\" id=\"test1\" [(ngModel)]=\"user.utype\"/>\n\t\t\t\t\t\t<label for=\"test1\">Admin</label>\n\t\t\t\t\t</p>\n\t\t\t\t\t<p>\n\t\t\t\t\t\t<input name=\"group1\" type=\"radio\" id=\"test2\" [(ngModel)]=\"user.utype\"/>\n\t\t\t\t\t\t<label for=\"test2\">Teacher</label>\n\t\t\t\t\t</p>\n\t\t\t\t\t<p>\n\t\t\t\t\t\t<input class=\"with-gap\" name=\"group1\" type=\"radio\" id=\"test3\"  [(ngModel)]=\"user.utype\"/>\n\t\t\t\t\t\t<label for=\"test3\">Student</label>\n\t\t\t\t\t</p>\n\n\t\t\t</form>\n\n\t</div>\n</div>"
+module.exports = "<div class=\"container\">\n\t<div class=\"row\"><div class=\"col s12\"><h1>Create a new user!</h1></div></div>\n\t<div class=\"row\">\n\t\t\t<form class=\"col s12\">\n\n\t\t\t\t<div class=\"row\">\n\t\t\t\t\t<div class=\"input-field col s6\">\n\t\t\t\t\t\t\t<i class=\"material-icons prefix\">account_circle</i>\n\t\t\t\t\t\t<input id=\"first_name\" type=\"text\" class=\"validate\" required [(ngModel)]=\"user.fname\">\n\t\t\t\t\t\t<label for=\"first_name\">First Name</label>\n\t\t\t\t\t</div>\n\t\t\t\t\t\n\t\t\t\t\t<div class=\"input-field col s6\">\n\t\t\t\t\t\t<input id=\"last_name\" type=\"text\" class=\"validate\" required [(ngModel)]=\"user.lname\">\n\t\t\t\t\t\t<label for=\"last_name\">Last Name</label>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t\n\t\t\t\t<div class=\"row\">\n\t\t\t\t\t<div class=\"input-field col s12\">\n\t\t\t\t\t\t<i class=\"material-icons prefix\">email</i>\n\t\t\t\t\t\t<input id=\"email\" type=\"email\" class=\"validate\" required [(ngModel)]=\"user.email\">\n\t\t\t\t\t\t<label for=\"email\">Email</label>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\n\t\t\t\t<p>\n\t\t\t\t\t\t<input name=\"group1\" type=\"radio\" id=\"test1\" required [(ngModel)]=\"user.utype\" value=\"admin\"/>\n\t\t\t\t\t\t<label for=\"test1\">Admin</label>\n\t\t\t\t\t</p>\n\t\t\t\t\t<p>\n\t\t\t\t\t\t<input name=\"group1\" type=\"radio\" id=\"test2\" required [(ngModel)]=\"user.utype\" value=\"teacher\"/>\n\t\t\t\t\t\t<label for=\"test2\">Teacher</label>\n\t\t\t\t\t</p>\n\t\t\t\t\t<p>\n\t\t\t\t\t\t<input class=\"with-gap\" name=\"group1\" type=\"radio\" id=\"test3\" required [(ngModel)]=\"user.utype\" value=\"student\"/>\n\t\t\t\t\t\t<label for=\"test3\">Student</label>\n\t\t\t\t\t</p>\n\n\t\t\t</form>\n\n\t</div>\n</div>"
 
 /***/ }),
 
@@ -651,7 +791,7 @@ var StudentCreationComponent = (function () {
     return StudentCreationComponent;
 }());
 StudentCreationComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-student-creation',
         template: __webpack_require__("../../../../../src/app/student-creation/student-creation.component.html"),
         styles: [__webpack_require__("../../../../../src/app/student-creation/student-creation.component.css")]
@@ -694,7 +834,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 if (__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].production) {
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_23" /* enableProdMode */])();
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["enableProdMode"])();
 }
 Object(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_2__app_app_module__["a" /* AppModule */])
     .catch(function (err) { return console.log(err); });
