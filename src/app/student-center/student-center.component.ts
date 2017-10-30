@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Class } from "../class";
 
 @Component({
   selector: 'app-student-center',
