@@ -15,6 +15,7 @@ import { CalendarComponent } from './calendar/calendar.component';
 import { SidebarNavComponent } from './sidebar-nav/sidebar-nav.component';
 import { SidebarNavCollapsedComponent } from './sidebar-nav-collapsed/sidebar-nav-collapsed.component';
 import { StudentCreationComponent } from './student-creation/student-creation.component';
+import { SidebarModule } from 'ng-sidebar';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,7 @@ import { StudentCreationComponent } from './student-creation/student-creation.co
 		CalendarComponent,
 		SidebarNavComponent,
 		SidebarNavCollapsedComponent,
-		StudentCreationComponent
+		StudentCreationComponent,
   ],
   imports: [
 		BrowserModule,
@@ -34,7 +35,8 @@ import { StudentCreationComponent } from './student-creation/student-creation.co
 		AppRoutingModule,
 		MaterializeModule,
 		BrowserAnimationsModule,
-    CalendarModule.forRoot()
+		CalendarModule.forRoot(),
+		SidebarModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
