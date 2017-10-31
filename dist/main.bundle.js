@@ -145,7 +145,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<ng-sidebar-container>\n  <ng-sidebar\n    [(opened)]=\"_opened\"\n    [mode]=\"_MODES[_modeNum]\"\n    [keyClose]=\"_keyClose\"\n    [position]=\"_POSITIONS[_positionNum]\"\n    [dock]=\"_dock\"\n    [dockedSize]=\"'50px'\"\n    [autoCollapseHeight]=\"_autoCollapseHeight\"\n    [autoCollapseWidth]=\"_autoCollapseWidth\"\n    [closeOnClickOutside]=\"_closeOnClickOutside\"\n    [closeOnClickBackdrop]=\"_closeOnClickBackdrop\"\n    [showBackdrop]=\"_showBackdrop\"\n    [animate]=\"_animate\"\n    [trapFocus]=\"_trapFocus\"\n    [autoFocus]=\"_autoFocus\"\n    [sidebarClass]=\"'demo-sidebar'\"\n    [ariaLabel]=\"'My sidebar'\"\n    (onOpenStart)=\"_onOpenStart()\"\n    (onOpened)=\"_onOpened()\"\n    (onCloseStart)=\"_onCloseStart()\"\n    (onClosed)=\"_onClosed()\">\n    <p>Sidebar contents</p>\n    <button class=\"demo-control\" (click)=\"_toggleOpened()\">Close sidebar</button>\n    <p><a closeSidebar>This will close the sidebar too</a></p>\n</ng-sidebar>\n<div ng-sidebar-content>\n        <header class=\"demo-header\">\n          <button (click)=\"_toggleOpened()\" class=\"demo-header__toggle\">Toggle sidebar</button>\n          <span>ng-sidebar</span>\n        </header>\n        <section class=\"demo-contents\">\n          <h1>Options</h1>\n          <h2>Sidebar</h2>\n          <div>\n            <button class=\"demo-control\" (click)=\"_toggleOpened()\">opened ({{_opened}})</button>\n            <button class=\"demo-control\" (click)=\"_toggleMode()\">mode ({{_MODES[_modeNum]}})</button>\n            <button class=\"demo-control\" (click)=\"_togglePosition()\">position ({{_POSITIONS[_positionNum]}})</button>\n            <button class=\"demo-control\" (click)=\"_toggleDock()\">dock ({{_dock}})</button>\n          </div>\n          <div>\n            <button class=\"demo-control\" (click)=\"_toggleAutoCollapseHeight()\">Auto collapse at 500px height ({{_autoCollapseHeight ? 'true' : 'false'}})</button>\n            <button class=\"demo-control\" (click)=\"_toggleAutoCollapseWidth()\">Auto collapse at 500px width ({{_autoCollapseWidth ? 'true' : 'false'}})</button>\n          </div>\n          <div>\n            <button class=\"demo-control\" (click)=\"_toggleCloseOnClickOutside()\">closeOnClickOutside ({{_closeOnClickOutside}})</button>\n            <button class=\"demo-control\" (click)=\"_toggleCloseOnClickBackdrop()\">closeOnClickBackdrop ({{_closeOnClickBackdrop}})</button>\n            <button class=\"demo-control\" (click)=\"_toggleShowBackdrop()\">showBackdrop ({{_showBackdrop}})</button>\n            <button class=\"demo-control\" (click)=\"_toggleAnimate()\">animate ({{_animate}})</button>\n          </div>\n          <div>\n            <button class=\"demo-control\" (click)=\"_toggleTrapFocus()\">trapFocus ({{_trapFocus}})</button>\n            <button class=\"demo-control\" (click)=\"_toggleAutoFocus()\">autoFocus ({{_autoFocus}})</button>\n            <button class=\"demo-control\" (click)=\"_toggleKeyClose()\">keyClose ({{_keyClose}})</button>\n          </div>\n        </section>\n      </div>\n</ng-sidebar-container>\n\n<router-outlet></router-outlet>\n"
+module.exports = "<router-outlet></router-outlet>\n"
 
 /***/ }),
 
@@ -276,12 +276,16 @@ AppComponent = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16_ng_sidebar__ = __webpack_require__("../../../../ng-sidebar/lib/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16_ng_sidebar___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_16_ng_sidebar__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__class_creation_class_creation_component__ = __webpack_require__("../../../../../src/app/class-creation/class-creation.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__class_list_class_list_component__ = __webpack_require__("../../../../../src/app/class-list/class-list.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__homework_list_homework_list_component__ = __webpack_require__("../../../../../src/app/homework-list/homework-list.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
 
 
 
@@ -316,12 +320,14 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_13__sidebar_nav_sidebar_nav_component__["a" /* SidebarNavComponent */],
             __WEBPACK_IMPORTED_MODULE_14__sidebar_nav_collapsed_sidebar_nav_collapsed_component__["a" /* SidebarNavCollapsedComponent */],
             __WEBPACK_IMPORTED_MODULE_15__student_creation_student_creation_component__["a" /* StudentCreationComponent */],
-            __WEBPACK_IMPORTED_MODULE_17__class_creation_class_creation_component__["a" /* ClassCreationComponent */]
+            __WEBPACK_IMPORTED_MODULE_17__class_creation_class_creation_component__["a" /* ClassCreationComponent */],
+            __WEBPACK_IMPORTED_MODULE_18__class_list_class_list_component__["a" /* ClassListComponent */],
+            __WEBPACK_IMPORTED_MODULE_19__homework_list_homework_list_component__["a" /* HomeworkListComponent */]
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
             __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormsModule */],
-            __WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* HttpModule */],
+            __WEBPACK_IMPORTED_MODULE_3__angular_http__["c" /* HttpModule */],
             __WEBPACK_IMPORTED_MODULE_7__app_routing_module__["a" /* AppRoutingModule */],
             __WEBPACK_IMPORTED_MODULE_4_angular2_materialize__["a" /* MaterializeModule */],
             __WEBPACK_IMPORTED_MODULE_5__angular_platform_browser_animations__["a" /* BrowserAnimationsModule */],
@@ -421,7 +427,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/class-creation/class-creation.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\n\t<div class=\"row\"><div class=\"col s12\"><h1>Create a class!</h1></div></div>\n\t<div class=\"row\">\n\t\t\t<form class=\"col s12\">\n\n\t\t\t\t<div class=\"row\">\n\t\t\t\t\t<div class=\"input-field col s6\">\n\t\t\t\t\t\t\t<i class=\"material-icons prefix\">account_circle</i>\n\t\t\t\t\t\t<input id=\"first_name\" type=\"text\" class=\"validate\" required [(ngModel)]=\"user.fname\">\n\t\t\t\t\t\t<label for=\"first_name\">First Name</label>\n\t\t\t\t\t</div>\n\t\t\t\t\t\n\t\t\t\t\t<div class=\"input-field col s6\">\n\t\t\t\t\t\t<input id=\"last_name\" type=\"text\" class=\"validate\" required [(ngModel)]=\"user.lname\">\n\t\t\t\t\t\t<label for=\"last_name\">Last Name</label>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t\n\t\t\t\t<div class=\"row\">\n\t\t\t\t\t<div class=\"input-field col s12\">\n\t\t\t\t\t\t<i class=\"material-icons prefix\">email</i>\n\t\t\t\t\t\t<input id=\"email\" type=\"email\" class=\"validate\" required [(ngModel)]=\"user.email\">\n\t\t\t\t\t\t<label for=\"email\">Email</label>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\n\t\t\t\t<p>\n\t\t\t\t\t\t<input name=\"group1\" type=\"radio\" id=\"test1\" required [(ngModel)]=\"user.utype\" value=\"admin\"/>\n\t\t\t\t\t\t<label for=\"test1\">Admin</label>\n\t\t\t\t\t</p>\n\t\t\t\t\t<p>\n\t\t\t\t\t\t<input name=\"group1\" type=\"radio\" id=\"test2\" required [(ngModel)]=\"user.utype\" value=\"teacher\"/>\n\t\t\t\t\t\t<label for=\"test2\">Teacher</label>\n\t\t\t\t\t</p>\n\t\t\t\t\t<p>\n\t\t\t\t\t\t<input class=\"with-gap\" name=\"group1\" type=\"radio\" id=\"test3\" required [(ngModel)]=\"user.utype\" value=\"student\"/>\n\t\t\t\t\t\t<label for=\"test3\">Student</label>\n\t\t\t\t\t</p>\n\n\t\t\t</form>\n\n\t</div>\n</div>"
+module.exports = "<div class=\"container\">\n\t<div class=\"row\"><div class=\"col s12\"><h1>Create a class!</h1></div></div>\n\t<div class=\"row\">\n\t\t\t<form class=\"col s12\" #form=\"ngForm\" (ngSubmit)=\"onSubmitAddVideo(form.value)\">\n\n\t\t\t\t<div class=\"row\">\n\t\t\t\t\t<div class=\"input-field col s6\">\n\t\t\t\t\t\t\t<i class=\"material-icons prefix\">account_circle</i>\n\t\t\t\t\t\t<input id=\"first_name\" type=\"text\" class=\"validate\" required name=\"fistname\" ngModel>\n\t\t\t\t\t\t<label for=\"first_name\">First Name</label>\n\t\t\t\t\t</div>\n\t\t\t\t\t\n\t\t\t\t\t<div class=\"input-field col s6\">\n\t\t\t\t\t\t<input id=\"last_name\" type=\"text\" class=\"validate\" required name=\"lastname\" ngModel>\n\t\t\t\t\t\t<label for=\"last_name\">Last Name</label>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t\n\t\t\t\t<div class=\"row\">\n\t\t\t\t\t<div class=\"input-field col s12\">\n\t\t\t\t\t\t<i class=\"material-icons prefix\">email</i>\n\t\t\t\t\t\t<input id=\"email\" type=\"email\" class=\"validate\" required name=\"email\" ngModel>\n\t\t\t\t\t\t<label for=\"email\">Email</label>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\n\t\t\t\t<p>\n\t\t\t\t\t\t<input name=\"group1\" type=\"radio\" id=\"test1\" required [(ngModel)]=\"usertype\" value=\"admin\"/>\n\t\t\t\t\t\t<label for=\"test1\">Admin</label>\n\t\t\t\t\t</p>\n\t\t\t\t\t<p>\n\t\t\t\t\t\t<input name=\"group1\" type=\"radio\" id=\"test2\" required [(ngModel)]=\"user.utype\" value=\"teacher\"/>\n\t\t\t\t\t\t<label for=\"test2\">Teacher</label>\n\t\t\t\t\t</p>\n\t\t\t\t\t<p>\n\t\t\t\t\t\t<input class=\"with-gap\" name=\"group1\" type=\"radio\" id=\"test3\" required [(ngModel)]=\"user.utype\" value=\"student\"/>\n\t\t\t\t\t\t<label for=\"test3\">Student</label>\n\t\t\t\t\t</p>\n\n\t\t\t</form>\n\n\t</div>\n</div>"
 
 /***/ }),
 
@@ -458,6 +464,128 @@ ClassCreationComponent = __decorate([
 ], ClassCreationComponent);
 
 //# sourceMappingURL=class-creation.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/class-list/class-list.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/class-list/class-list.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<p>\n  class-list works!\n</p>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/class-list/class-list.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ClassListComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var ClassListComponent = (function () {
+    function ClassListComponent() {
+    }
+    ClassListComponent.prototype.ngOnInit = function () {
+    };
+    return ClassListComponent;
+}());
+ClassListComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-class-list',
+        template: __webpack_require__("../../../../../src/app/class-list/class-list.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/class-list/class-list.component.css")]
+    }),
+    __metadata("design:paramtypes", [])
+], ClassListComponent);
+
+//# sourceMappingURL=class-list.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/homework-list/homework-list.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/homework-list/homework-list.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<p>\n  homework-list works!\n</p>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/homework-list/homework-list.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomeworkListComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var HomeworkListComponent = (function () {
+    function HomeworkListComponent() {
+    }
+    HomeworkListComponent.prototype.ngOnInit = function () {
+    };
+    return HomeworkListComponent;
+}());
+HomeworkListComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-homework-list',
+        template: __webpack_require__("../../../../../src/app/homework-list/homework-list.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/homework-list/homework-list.component.css")]
+    }),
+    __metadata("design:paramtypes", [])
+], HomeworkListComponent);
+
+//# sourceMappingURL=homework-list.component.js.map
 
 /***/ }),
 
@@ -702,7 +830,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/student-center/student-center.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  student-center works!\n</p>\n"
+module.exports = "<div class=\"container\">\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col s12\">\n\t\t\t\t<class-list [classes]=\"classes\"></class-list>\n\t\t\t</div>\n\t\t</div>\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col s12\">\n\t\t\t\t<homework-list [homeworks]=\"homeworks\"></homework-list>\n\t\t\t</div>\n\t\t</div>\n\t</div>"
 
 /***/ }),
 
@@ -712,6 +840,7 @@ module.exports = "<p>\n  student-center works!\n</p>\n"
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return StudentCenterComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__user_service__ = __webpack_require__("../../../../../src/app/user.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -722,10 +851,14 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
 var StudentCenterComponent = (function () {
-    function StudentCenterComponent() {
+    function StudentCenterComponent(_userService) {
+        this._userService = _userService;
     }
     StudentCenterComponent.prototype.ngOnInit = function () {
+        //this._userService.getUsers()
+        //.subscribe(resUserData => this.users = resUserData);
     };
     return StudentCenterComponent;
 }());
@@ -733,11 +866,13 @@ StudentCenterComponent = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-student-center',
         template: __webpack_require__("../../../../../src/app/student-center/student-center.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/student-center/student-center.component.css")]
+        styles: [__webpack_require__("../../../../../src/app/student-center/student-center.component.css")],
+        providers: [__WEBPACK_IMPORTED_MODULE_1__user_service__["a" /* UserService */]]
     }),
-    __metadata("design:paramtypes", [])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__user_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__user_service__["a" /* UserService */]) === "function" && _a || Object])
 ], StudentCenterComponent);
 
+var _a;
 //# sourceMappingURL=student-center.component.js.map
 
 /***/ }),
@@ -800,6 +935,54 @@ StudentCreationComponent = __decorate([
 ], StudentCreationComponent);
 
 //# sourceMappingURL=student-creation.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/user.service.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UserService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__("../../../../rxjs/_esm5/add/operator/map.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var UserService = (function () {
+    function UserService(_http) {
+        this._http = _http;
+        this._getUrl = "/api/users";
+        this._postUrl = "/api/user";
+    }
+    UserService.prototype.getUsers = function () {
+        return this._http.get(this._getUrl)
+            .map(function (response) { return response.json(); });
+    };
+    UserService.prototype.addUser = function (user) {
+        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Headers */]({ 'Content-Type': 'application/json' });
+        var options = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["d" /* RequestOptions */]({ headers: headers });
+        return this._http.post(this._postUrl, JSON.stringify(user), options)
+            .map(function (response) { return response.json(); });
+    };
+    return UserService;
+}());
+UserService = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]) === "function" && _a || Object])
+], UserService);
+
+var _a;
+//# sourceMappingURL=user.service.js.map
 
 /***/ }),
 

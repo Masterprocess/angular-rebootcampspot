@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 import { MaterializeModule } from 'angular2-materialize';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CalendarModule } from 'angular-calendar';
+import { Observable } from 'rxjs/Rx';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
