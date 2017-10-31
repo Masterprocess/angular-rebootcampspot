@@ -1,17 +1,17 @@
 <div class="container">
 	<div class="row"><div class="col s12"><h1>Create a new user!</h1></div></div>
 	<div class="row">
-			<form class="col s12">
+			<form class="col s12" #form="ngForm" (ngSubmit)="onSubmitAddVideo(form.value)">
 
 				<div class="row">
 					<div class="input-field col s6">
 							<i class="material-icons prefix">account_circle</i>
-						<input id="first_name" type="text" class="validate" required [(ngModel)]="user.fname">
+						<input id="first_name" type="text" class="validate" required name="firstname" ngModel>
 						<label for="first_name">First Name</label>
 					</div>
 					
 					<div class="input-field col s6">
-						<input id="last_name" type="text" class="validate" required [(ngModel)]="user.lname">
+						<input id="last_name" type="text" class="validate" required name="lastname" ngModel>
 						<label for="last_name">Last Name</label>
 					</div>
 				</div>
@@ -19,25 +19,41 @@
 				<div class="row">
 					<div class="input-field col s12">
 						<i class="material-icons prefix">email</i>
-						<input id="email" type="email" class="validate" required [(ngModel)]="user.email">
-						<label for="email">Email</label>
+						<input id="email" type="email" class="validate" required name="email" ngModel>
+						<label for="email" data-error="try again" data-success="yep, you didn't screw up">Email</label>
 					</div>
 				</div>
 
 				<p>
-						<input name="group1" type="radio" id="test1" required [(ngModel)]="user.utype" value="admin"/>
+						<input name="group1" type="radio" id="test1" required name="type" ngModel value="admin"/>
 						<label for="test1">Admin</label>
 					</p>
 					<p>
-						<input name="group1" type="radio" id="test2" required [(ngModel)]="user.utype" value="teacher"/>
+						<input name="group1" type="radio" id="test2" required name="type" ngModel value="teacher"/>
 						<label for="test2">Teacher</label>
 					</p>
 					<p>
-						<input class="with-gap" name="group1" type="radio" id="test3" required [(ngModel)]="user.utype" value="student"/>
+						<input class="with-gap" name="group1" type="radio" id="test3" required name="type" ngModel value="student"/>
 						<label for="test3">Student</label>
 					</p>
-
+					<a class="waves-effect waves-light btn"><i class="material-icons right">cloud</i>button</a>
 			</form>
 
 	</div>
 </div>
+
+<form #form="ngForm" (ngSubmit)="onSubmitAddVideo(form.value)" class="well">
+		<div class="form-group">
+			<label>Title</label>
+			<input type="text" class="form-control" required name="title" ngModel>
+		</div>
+		<div class="form-group">
+			<label>Url</label>
+			<input type="text" class="form-control" required name="url" ngModel>
+		</div>
+		<div class="form-group">
+			<label>Description</label>
+			<input type="text" class="form-control" name="description" ngModel>
+		</div>
+		<button type="submit" class="btn btn-success">Save</button>
+	</form>
