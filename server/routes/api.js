@@ -49,7 +49,7 @@ router.post('/user', function(res,req){
 		newUser.userType = req.body.userType;
 		newUser.save(function(err, insertedUser){
 			if (err){
-				console.log("Error saving new user. Quel dommage.")
+				console.log("Error saving new user. Quel dommage.");
 			}else{
 				res.json(insertedUser);
 			}
