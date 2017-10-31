@@ -12,4 +12,4 @@ const userSchema = new Schema ({
 		userType: String
 });
 
-module.exports = mongoose.model('user', userSchema, 'users');
+module.exports = mongoose.model('attendance', userSchema, 'attendances');

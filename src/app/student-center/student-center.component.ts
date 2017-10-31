@@ -18,8 +18,8 @@ export class StudentCenterComponent implements OnInit {
   constructor(private _userService: UserService) { }
 
   ngOnInit() {
-		this._userService.getUsers()
-			.subscribe(resUserData => this.users = resUserData);
+		//this._userService.getUsers()
+			//.subscribe(resUserData => this.users = resUserData);
   }
 
 }
