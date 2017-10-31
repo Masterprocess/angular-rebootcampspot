@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Http, Response, Headers, RequestOptions } from '@angular/http';
-import '/rxjs/add/operator/map';
+import 'rxjs/add/operator/map';
 import { User } from './user';
 
 @Injectable()
@@ -8,6 +8,8 @@ export class UserService {
 
 	private _getUrl = "/api/users";
 	private _postUrl = "/api/user";
+	private _putUrl = "/api/user/";
+  private _deleteUrl = "/api/user/";
 
 	constructor(private _http: Http) { }
 	
@@ -22,4 +24,16 @@ export class UserService {
 		return this._http.post(this._postUrl, JSON.stringify(user), options)
 			.map((response: Response) => response.json());
 	}
+
+	updateUser(user: User) {
+    let headers = new Headers({ 'Content-Type': 'application/json' });
+    let options = new RequestOptions({ headers: headers });
+    return this._http.put(this._putUrl + user._id, JSON.stringify(user), options)
+      .map((response: Response) => response.json());
+  }
+
+  deleteUser(user: User) {
+    return this._http.delete(this._deleteUrl + user._id)
+      .map((response: Response) => response.json());
+  }
 }

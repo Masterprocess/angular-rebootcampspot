@@ -5,6 +5,8 @@ import { HttpModule } from '@angular/http';
 import { MaterializeModule } from 'angular2-materialize';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CalendarModule } from 'angular-calendar';
+import { Observable } from 'rxjs/Rx';
+import { MatSidenavModule, MatButtonModule, MatCheckboxModule } from '@angular/material';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -46,7 +48,10 @@ import { HomeworkListComponent } from './homework-list/homework-list.component';
 		MaterializeModule,
 		BrowserAnimationsModule,
 		CalendarModule.forRoot(),
-		SidebarModule.forRoot()
+		SidebarModule.forRoot(),
+		MatButtonModule,
+		MatCheckboxModule,
+		MatSidenavModule
   ],
   providers: [],
   bootstrap: [AppComponent]

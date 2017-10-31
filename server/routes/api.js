@@ -3,7 +3,7 @@ const router = express.Router();
 const mongoose = require('mongoose');
 const User = require('../models/user');
 
-const db = "mongodb://rebootcampspotad:j0bsecuritymakesme_sad@ds229415.mlab.com:29415/rebootcampspotdb";
+const db = "mongodb://rebootcampspotad:j0bsecuritymakesme_sad@ds131854.mlab.com:31854/rebootcampspot";
 mongoose.Promise = global.Promise;
 mongoose.connect(db, {
 	useMongoClient: true
@@ -49,7 +49,7 @@ router.post('/user', function(res,req){
 		newUser.userType = req.body.userType;
 		newUser.save(function(err, insertedUser){
 			if (err){
-				console.log("Error saving new user. Quel dommage.")
+				console.log("Error saving new user. Quel dommage.");
 			}else{
 				res.json(insertedUser);
 			}

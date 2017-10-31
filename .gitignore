@@ -1,4 +1,7 @@
-.vscode
+/node_modules
 /dist
+<<<<<<< HEAD
 node_modules
+=======
+>>>>>>> 15aca000e4b1420bb8c48d41783f6db346cde175
 .DS_Store
