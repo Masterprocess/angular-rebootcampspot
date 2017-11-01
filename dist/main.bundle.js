@@ -482,7 +482,7 @@ ClassCreationComponent = __decorate([
 /***/ "../../../../../src/app/class-list/class-list.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<table id=\"table\" class=\"responsive-table table-hover table-mc-light-blue\">\n    <thead>\n      <tr>\n        <th>ID</th>\n        <th>Date</th>\n        <th>Time</th>\n        <th>Topic</th>\n        <th>Info</th>\n      </tr>\n    </thead>\n    <tbody>\n      <tr>\n        <td data-title=\"ID\">1</td>\n        <td data-title=\"Date\">11/04/2017</td>\n        <td data-title=\"Time\">6:30-9:30</td>\n        <td data-title=\"Topic\">Lesson 1.1 : The Zen of Coding</td>        \n        <td data-title=\"Info\">\n        <a href=\"#\" target=\"_blank\">Info</a>      \n      </td>\n      </tr>\n      <tr>\n        <td data-title=\"ID\">2</td>\n        <td data-title=\"Date\">11/04/2017</td>\n        <td data-title=\"Time\">6:30-9:30</td>\n        <td data-title=\"Topic\">Lesson 1.2 : Git'n Pro with HTML and CSS</td>        \n        <td data-title=\"Info\">\n        <a href=\"#\" target=\"_blank\">Info</a>\n        </td>\n      </tr>\n      <tr>\n        <td data-title=\"ID\">3</td>\n        <td data-title=\"Date\">11/04/2017</td>\n        <td data-title=\"Time\">6:30-9:30</td>\n        <td data-title=\"Topic\">Lesson 1.3 : Heroes of CSS</td>        \n        <td data-title=\"Info\">\n        <a href=\"#\" target=\"_blank\">Info</a>\n        </td>\n      </tr>\n      <tr>\n        <td data-title=\"ID\">4</td>\n        <td data-title=\"Date\">11/04/2017</td>\n        <td data-title=\"Time\">6:30-9:30</td>\n        <td data-title=\"Topic\">Lesson 2.1 : Going Live</td>        \n        <td data-title=\"Info\">\n        <a href=\"#\" target=\"_blank\">Info</a>\n        </td>\n      </tr>\n      <tr>\n        <td data-title=\"ID\">5</td>\n        <td data-title=\"Date\">11/04/2017</td>\n        <td data-title=\"Time\">6:30-9:30</td>\n        <td data-title=\"Topic\">Lesson 2.2 : Down and Dirty CSS</td>        \n        <td data-title=\"Info\">\n        <a href=\"#\" target=\"_blank\">Info</a>\n        </td>\n      </tr>\n      <tr>\n        <td data-title=\"ID\">6</td>\n        <td data-title=\"Date\">11/04/2017</td>\n        <td data-title=\"Time\">6:30-9:30</td>\n        <td data-title=\"Topic\">Lesson 2.3 : Layouts with Bootstrap</td>        \n        <td data-title=\"Info\">\n        <a href=\"#\" target=\"_blank\">Info</a>\n        </td>\n      </tr>\n      <tr>\n        <td data-title=\"ID\">7</td>\n        <td data-title=\"Date\">11/04/2017</td>\n        <td data-title=\"Time\">6:30-9:30</td>\n        <td data-title=\"Topic\">Lesson 3.1 : Joys of JavaScript</td>        \n        <td data-title=\"Info\">\n        <a href=\"#\" target=\"_blank\">Info</a>\n        </td>\n      </tr>\n      <tr>\n        <td data-title=\"ID\">8</td>\n        <td data-title=\"Date\">11/04/2017</td>\n        <td data-title=\"Time\">6:30-9:30</td>\n        <td data-title=\"Topic\">Lesson 3.2 : Jumping for JS</td>        \n        <td data-title=\"Info\">\n        <a href=\"#\" target=\"_blank\">Info</a>\n        </td>\n      </tr>\n      <tr>\n        <td data-title=\"ID\">9</td>\n        <td data-title=\"Date\">11/04/2017</td>\n        <td data-title=\"Time\">6:30-9:30</td>\n        <td data-title=\"Topic\">Lesson 3.3 : JavaScript Juggernauts</td>        \n        <td data-title=\"Info\">\n        <a href=\"#\" target=\"_blank\">Info</a>\n        </td>\n      </tr>\n      <tr>\n        <td data-title=\"ID\">10</td>\n        <td data-title=\"Date\">11/04/2017</td>\n        <td data-title=\"Time\">6:30-9:30</td>\n        <td data-title=\"Topic\">Lesson 4.1 : jQuery Begins</td>        \n        <td data-title=\"Info\">\n        <a href=\"#\" target=\"_blank\">Info</a>\n        </td>\n      </tr>\n      <tr>\n    </tbody>\n  </table>\n</div>"
+module.exports = "<!-- <table id=\"table\" class=\"responsive-table table-hover table-mc-light-blue\">\n    <thead>\n      <tr>\n        <th>ID</th>\n        <th>Date</th>\n        <th>Time</th>\n        <th>Topic</th>\n        <th>Info</th>\n      </tr>\n    </thead> \n    <tbody>\n      <tr>\n        <td data-title=\"ID\">1</td>\n        <td data-title=\"Date\">11/04/2017</td>\n        <td data-title=\"Time\">6:30-9:30</td>\n        <td data-title=\"Topic\">Lesson 1.1 : The Zen of Coding</td>        \n        <td data-title=\"Info\">\n        <a href=\"#\" target=\"_blank\">Info</a>      \n      </td>\n      </tr>\n      <tr>\n        <td data-title=\"ID\">2</td>\n        <td data-title=\"Date\">11/04/2017</td>\n        <td data-title=\"Time\">6:30-9:30</td>\n        <td data-title=\"Topic\">Lesson 1.2 : Git'n Pro with HTML and CSS</td>        \n        <td data-title=\"Info\">\n        <a href=\"#\" target=\"_blank\">Info</a>\n        </td>\n      </tr>\n      <tr>\n        <td data-title=\"ID\">3</td>\n        <td data-title=\"Date\">11/04/2017</td>\n        <td data-title=\"Time\">6:30-9:30</td>\n        <td data-title=\"Topic\">Lesson 1.3 : Heroes of CSS</td>        \n        <td data-title=\"Info\">\n        <a href=\"#\" target=\"_blank\">Info</a>\n        </td>\n      </tr>\n      <tr>\n        <td data-title=\"ID\">4</td>\n        <td data-title=\"Date\">11/04/2017</td>\n        <td data-title=\"Time\">6:30-9:30</td>\n        <td data-title=\"Topic\">Lesson 2.1 : Going Live</td>        \n        <td data-title=\"Info\">\n        <a href=\"#\" target=\"_blank\">Info</a>\n        </td>\n      </tr>\n      <tr>\n        <td data-title=\"ID\">5</td>\n        <td data-title=\"Date\">11/04/2017</td>\n        <td data-title=\"Time\">6:30-9:30</td>\n        <td data-title=\"Topic\">Lesson 2.2 : Down and Dirty CSS</td>        \n        <td data-title=\"Info\">\n        <a href=\"#\" target=\"_blank\">Info</a>\n        </td>\n      </tr>\n      <tr>\n        <td data-title=\"ID\">6</td>\n        <td data-title=\"Date\">11/04/2017</td>\n        <td data-title=\"Time\">6:30-9:30</td>\n        <td data-title=\"Topic\">Lesson 2.3 : Layouts with Bootstrap</td>        \n        <td data-title=\"Info\">\n        <a href=\"#\" target=\"_blank\">Info</a>\n        </td>\n      </tr>\n      <tr>\n        <td data-title=\"ID\">7</td>\n        <td data-title=\"Date\">11/04/2017</td>\n        <td data-title=\"Time\">6:30-9:30</td>\n        <td data-title=\"Topic\">Lesson 3.1 : Joys of JavaScript</td>        \n        <td data-title=\"Info\">\n        <a href=\"#\" target=\"_blank\">Info</a>\n        </td>\n      </tr>\n      <tr>\n        <td data-title=\"ID\">8</td>\n        <td data-title=\"Date\">11/04/2017</td>\n        <td data-title=\"Time\">6:30-9:30</td>\n        <td data-title=\"Topic\">Lesson 3.2 : Jumping for JS</td>        \n        <td data-title=\"Info\">\n        <a href=\"#\" target=\"_blank\">Info</a>\n        </td>\n      </tr>\n      <tr>\n        <td data-title=\"ID\">9</td>\n        <td data-title=\"Date\">11/04/2017</td>\n        <td data-title=\"Time\">6:30-9:30</td>\n        <td data-title=\"Topic\">Lesson 3.3 : JavaScript Juggernauts</td>        \n        <td data-title=\"Info\">\n        <a href=\"#\" target=\"_blank\">Info</a>\n        </td>\n      </tr>\n      <tr>\n        <td data-title=\"ID\">10</td>\n        <td data-title=\"Date\">11/04/2017</td>\n        <td data-title=\"Time\">6:30-9:30</td>\n        <td data-title=\"Topic\">Lesson 4.1 : jQuery Begins</td>        \n        <td data-title=\"Info\">\n        <a href=\"#\" target=\"_blank\">Info</a>\n        </td>\n      </tr>\n      <tr>\n    </tbody>\n  </table>\n</div> -->"
 
 /***/ }),
 
@@ -604,7 +604,7 @@ HomeworkListComponent = __decorate([
 /***/ "../../../../../src/app/login/login.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"section grey lighten-3\">\n  <div class=\"row container\">\n    <h2 class=\"header\">ReBootcampSpot</h2>\n  <p class=\"grey-text text-darken-3 lighten-3\">A better bootcampspot, for both students and administrators</p>\n  </div>\n <div class=\"container align-center\"> \n  <h5>Sign In</h5>\t\t\t\n  <div id=\"googleBtn\" class=\"g-signin2\"></div>\n  </div>\n</div>\n\n   \n"
+module.exports = "<div class=\"section grey lighten-3\">\n  <div class=\"row container\">\n    <h2 class=\"header\">ReBootcampSpot</h2>\n  <p class=\"grey-text text-darken-3 lighten-3\">A better bootcampspot, for both students and administrators</p>\n  </div>\n <div class=\"container align-center\"> \n  <h5>Sign In</h5>\t\t\t\n  <div id=\"googleBtn\" class=\"g-signin2\"></div>\n  </div>\n</div>\n\n<div [ngStyle]=\"{'background-image': getUrl()}\"></div>\n\n   \n"
 
 /***/ }),
 
@@ -616,7 +616,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "html {\n  background: url(" + __webpack_require__("../../../../../src/assets/img/background.jpg") + ") no-repeat center center fixed;\n  background-size: cover; }\n", ""]);
+exports.push([module.i, "", ""]);
 
 // exports
 
@@ -625,7 +625,6 @@ exports.push([module.i, "html {\n  background: url(" + __webpack_require__("../.
 module.exports = module.exports.toString();
 
 /***/ }),
-
 
 /***/ "../../../../../src/app/login/login.component.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -654,6 +653,9 @@ var LoginComponent = (function () {
     }
     LoginComponent.prototype.ngOnInit = function () {
         __WEBPACK_IMPORTED_MODULE_1_angular2_google_login__["a" /* AppGlobals */].GOOGLE_CLIENT_ID = '480806216212-5vo6it25koaruotqbe5f9trvfssm3i4e.apps.googleusercontent.com';
+    };
+    LoginComponent.prototype.getUrl = function () {
+        return "url('./assets/ourImages/background.jpg')";
     };
     LoginComponent.prototype.googleInit = function () {
         var _this = this;
@@ -1113,13 +1115,6 @@ UserService = __decorate([
 
 var _a;
 //# sourceMappingURL=user.service.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/assets/img/background.jpg":
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "background.53195c65f150fb0c0bed.jpg";
 
 /***/ }),
 
