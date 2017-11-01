@@ -792,7 +792,21 @@ var LoginComponent = /** @class */ (function () {
     return LoginComponent;
     var _a, _b;
 }());
+<<<<<<< HEAD
 exports.LoginComponent = LoginComponent;
+=======
+LoginComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+        selector: 'app-login',
+        template: __webpack_require__("../../../../../src/app/login/login.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/login/login.component.css")],
+        providers: [__WEBPACK_IMPORTED_MODULE_1_angular2_google_login__["b" /* AuthService */]]
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_angular2_google_login__["b" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_angular2_google_login__["b" /* AuthService */]) === "function" && _b || Object])
+], LoginComponent);
+
+var _a, _b;
+>>>>>>> chris
 //# sourceMappingURL=login.component.js.map
 
 /***/ }),
