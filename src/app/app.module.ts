@@ -31,6 +31,7 @@ import { UserDetailComponent } from './user-detail/user-detail.component';
 import { HomeworkDetailComponent } from './homework-detail/homework-detail.component';
 import { LessonDetailComponent } from './lesson-detail/lesson-detail.component';
 import { CohortListComponent } from './cohort-list/cohort-list.component';
+import { MainFooterComponent } from './main-footer/main-footer.component';
 
 
 @NgModule({
@@ -59,6 +60,7 @@ import { CohortListComponent } from './cohort-list/cohort-list.component';
 		HomeworkDetailComponent,
 		LessonDetailComponent,
 		CohortListComponent
+		MainFooterComponent
   ],
   imports: [
     BrowserModule,
