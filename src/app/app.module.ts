@@ -21,6 +21,8 @@ import { HomeworkListComponent } from './homework-list/homework-list.component';
 import { UserListComponent } from './user-list/user-list.component';
 import { FooterComponent } from './footer/footer.component';
 import { LoginComponent } from './login/login.component';
+import { UserRedirectComponent } from './user-redirect/user-redirect.component';
+
 
 @NgModule({
   declarations: [
@@ -37,7 +39,8 @@ import { LoginComponent } from './login/login.component';
     HomeworkListComponent,
     UserListComponent,
 		FooterComponent,
-		LoginComponent
+		LoginComponent,
+		UserRedirectComponent
   ],
   imports: [
     BrowserModule,
