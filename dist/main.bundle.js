@@ -38,7 +38,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/admin-center/admin-center.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<p>admin center works!</p>"
+module.exports = "<p>admin center works!</p>\n"
 
 /***/ }),
 
@@ -60,8 +60,80 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 var AdminCenterComponent = (function () {
     function AdminCenterComponent() {
+        this._opened = true;
+        this._modeNum = 0;
+        this._positionNum = 0;
+        this._dock = true;
+        this._closeOnClickOutside = false;
+        this._closeOnClickBackdrop = false;
+        this._showBackdrop = false;
+        this._animate = true;
+        this._trapFocus = true;
+        this._autoFocus = true;
+        this._keyClose = false;
+        this._autoCollapseHeight = null;
+        this._autoCollapseWidth = null;
+        this._MODES = ['over', 'push', 'slide'];
+        this._POSITIONS = ['left', 'right', 'top', 'bottom'];
     }
     AdminCenterComponent.prototype.ngOnInit = function () {
+    };
+    AdminCenterComponent.prototype._toggleOpened = function () {
+        this._opened = !this._opened;
+    };
+    AdminCenterComponent.prototype._toggleMode = function () {
+        this._modeNum++;
+        if (this._modeNum === this._MODES.length) {
+            this._modeNum = 0;
+        }
+    };
+    AdminCenterComponent.prototype._toggleAutoCollapseHeight = function () {
+        this._autoCollapseHeight = this._autoCollapseHeight ? null : 500;
+    };
+    AdminCenterComponent.prototype._toggleAutoCollapseWidth = function () {
+        this._autoCollapseWidth = this._autoCollapseWidth ? null : 500;
+    };
+    AdminCenterComponent.prototype._togglePosition = function () {
+        this._positionNum++;
+        if (this._positionNum === this._POSITIONS.length) {
+            this._positionNum = 0;
+        }
+    };
+    AdminCenterComponent.prototype._toggleDock = function () {
+        this._dock = !this._dock;
+    };
+    AdminCenterComponent.prototype._toggleCloseOnClickOutside = function () {
+        this._closeOnClickOutside = !this._closeOnClickOutside;
+    };
+    AdminCenterComponent.prototype._toggleCloseOnClickBackdrop = function () {
+        this._closeOnClickBackdrop = !this._closeOnClickBackdrop;
+    };
+    AdminCenterComponent.prototype._toggleShowBackdrop = function () {
+        this._showBackdrop = !this._showBackdrop;
+    };
+    AdminCenterComponent.prototype._toggleAnimate = function () {
+        this._animate = !this._animate;
+    };
+    AdminCenterComponent.prototype._toggleTrapFocus = function () {
+        this._trapFocus = !this._trapFocus;
+    };
+    AdminCenterComponent.prototype._toggleAutoFocus = function () {
+        this._autoFocus = !this._autoFocus;
+    };
+    AdminCenterComponent.prototype._toggleKeyClose = function () {
+        this._keyClose = !this._keyClose;
+    };
+    AdminCenterComponent.prototype._onOpenStart = function () {
+        console.info('Sidebar opening');
+    };
+    AdminCenterComponent.prototype._onOpened = function () {
+        console.info('Sidebar opened');
+    };
+    AdminCenterComponent.prototype._onCloseStart = function () {
+        console.info('Sidebar closing');
+    };
+    AdminCenterComponent.prototype._onClosed = function () {
+        console.info('Sidebar closed');
     };
     return AdminCenterComponent;
 }());
@@ -145,7 +217,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<!-- <ng-sidebar-container>\n  <ng-sidebar\n    [(opened)]=\"_opened\"\n    [mode]=\"_MODES[_modeNum]\"\n    [keyClose]=\"_keyClose\"\n    [position]=\"_POSITIONS[_positionNum]\"\n    [dock]=\"_dock\"\n    [dockedSize]=\"'50px'\"\n    [autoCollapseHeight]=\"_autoCollapseHeight\"\n    [autoCollapseWidth]=\"_autoCollapseWidth\"\n    [closeOnClickOutside]=\"_closeOnClickOutside\"\n    [closeOnClickBackdrop]=\"_closeOnClickBackdrop\"\n    [showBackdrop]=\"_showBackdrop\"\n    [animate]=\"_animate\"\n    [trapFocus]=\"_trapFocus\"\n    [autoFocus]=\"_autoFocus\"\n    [sidebarClass]=\"'demo-sidebar'\"\n    [ariaLabel]=\"'My sidebar'\"\n    (onOpenStart)=\"_onOpenStart()\"\n    (onOpened)=\"_onOpened()\"\n    (onCloseStart)=\"_onCloseStart()\"\n    (onClosed)=\"_onClosed()\">\n    <p>Sidebar contents</p>\n    <button class=\"demo-control\" (click)=\"_toggleOpened()\">Close sidebar</button>\n    <p><a closeSidebar>This will close the sidebar too</a></p>\n</ng-sidebar>\n<div ng-sidebar-content>\n        <header class=\"demo-header\">\n          <button (click)=\"_toggleOpened()\" class=\"demo-header__toggle\">Toggle sidebar</button>\n          <span>ng-sidebar</span>\n        </header>\n        <section class=\"demo-contents\">\n          <h1>Options</h1>\n          <h2>Sidebar</h2>\n          <div>\n            <button class=\"demo-control\" (click)=\"_toggleOpened()\">opened ({{_opened}})</button>\n            <button class=\"demo-control\" (click)=\"_toggleMode()\">mode ({{_MODES[_modeNum]}})</button>\n            <button class=\"demo-control\" (click)=\"_togglePosition()\">position ({{_POSITIONS[_positionNum]}})</button>\n            <button class=\"demo-control\" (click)=\"_toggleDock()\">dock ({{_dock}})</button>\n          </div>\n          <div>\n            <button class=\"demo-control\" (click)=\"_toggleAutoCollapseHeight()\">Auto collapse at 500px height ({{_autoCollapseHeight ? 'true' : 'false'}})</button>\n            <button class=\"demo-control\" (click)=\"_toggleAutoCollapseWidth()\">Auto collapse at 500px width ({{_autoCollapseWidth ? 'true' : 'false'}})</button>\n          </div>\n          <div>\n            <button class=\"demo-control\" (click)=\"_toggleCloseOnClickOutside()\">closeOnClickOutside ({{_closeOnClickOutside}})</button>\n            <button class=\"demo-control\" (click)=\"_toggleCloseOnClickBackdrop()\">closeOnClickBackdrop ({{_closeOnClickBackdrop}})</button>\n            <button class=\"demo-control\" (click)=\"_toggleShowBackdrop()\">showBackdrop ({{_showBackdrop}})</button>\n            <button class=\"demo-control\" (click)=\"_toggleAnimate()\">animate ({{_animate}})</button>\n          </div>\n          <div>\n            <button class=\"demo-control\" (click)=\"_toggleTrapFocus()\">trapFocus ({{_trapFocus}})</button>\n            <button class=\"demo-control\" (click)=\"_toggleAutoFocus()\">autoFocus ({{_autoFocus}})</button>\n            <button class=\"demo-control\" (click)=\"_toggleKeyClose()\">keyClose ({{_keyClose}})</button>\n          </div>\n        </section>\n      </div>\n</ng-sidebar-container> -->\n\n<router-outlet></router-outlet>\n"
+module.exports = "\n\n<router-outlet></router-outlet>\n\n"
 
 /***/ }),
 
@@ -165,79 +237,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var AppComponent = (function () {
     function AppComponent() {
         this.title = 'app';
-        this._opened = true;
-        this._modeNum = 0;
-        this._positionNum = 0;
-        this._dock = true;
-        this._closeOnClickOutside = false;
-        this._closeOnClickBackdrop = false;
-        this._showBackdrop = false;
-        this._animate = true;
-        this._trapFocus = true;
-        this._autoFocus = true;
-        this._keyClose = false;
-        this._autoCollapseHeight = null;
-        this._autoCollapseWidth = null;
-        this._MODES = ['over', 'push', 'slide'];
-        this._POSITIONS = ['left', 'right', 'top', 'bottom'];
     }
-    AppComponent.prototype._toggleOpened = function () {
-        this._opened = !this._opened;
-    };
-    AppComponent.prototype._toggleMode = function () {
-        this._modeNum++;
-        if (this._modeNum === this._MODES.length) {
-            this._modeNum = 0;
-        }
-    };
-    AppComponent.prototype._toggleAutoCollapseHeight = function () {
-        this._autoCollapseHeight = this._autoCollapseHeight ? null : 500;
-    };
-    AppComponent.prototype._toggleAutoCollapseWidth = function () {
-        this._autoCollapseWidth = this._autoCollapseWidth ? null : 500;
-    };
-    AppComponent.prototype._togglePosition = function () {
-        this._positionNum++;
-        if (this._positionNum === this._POSITIONS.length) {
-            this._positionNum = 0;
-        }
-    };
-    AppComponent.prototype._toggleDock = function () {
-        this._dock = !this._dock;
-    };
-    AppComponent.prototype._toggleCloseOnClickOutside = function () {
-        this._closeOnClickOutside = !this._closeOnClickOutside;
-    };
-    AppComponent.prototype._toggleCloseOnClickBackdrop = function () {
-        this._closeOnClickBackdrop = !this._closeOnClickBackdrop;
-    };
-    AppComponent.prototype._toggleShowBackdrop = function () {
-        this._showBackdrop = !this._showBackdrop;
-    };
-    AppComponent.prototype._toggleAnimate = function () {
-        this._animate = !this._animate;
-    };
-    AppComponent.prototype._toggleTrapFocus = function () {
-        this._trapFocus = !this._trapFocus;
-    };
-    AppComponent.prototype._toggleAutoFocus = function () {
-        this._autoFocus = !this._autoFocus;
-    };
-    AppComponent.prototype._toggleKeyClose = function () {
-        this._keyClose = !this._keyClose;
-    };
-    AppComponent.prototype._onOpenStart = function () {
-        console.info('Sidebar opening');
-    };
-    AppComponent.prototype._onOpened = function () {
-        console.info('Sidebar opened');
-    };
-    AppComponent.prototype._onCloseStart = function () {
-        console.info('Sidebar closing');
-    };
-    AppComponent.prototype._onClosed = function () {
-        console.info('Sidebar closed');
-    };
     return AppComponent;
 }());
 AppComponent = __decorate([
@@ -472,7 +472,14 @@ ClassCreationComponent = __decorate([
 
 /***/ }),
 
-/***/ "../../../../../src/app/class-list/class-list.component.css":
+/***/ "../../../../../src/app/class-list/class-list.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<table id=\"table\" class=\"responsive-table table-hover table-mc-light-blue\">\n    <thead>\n      <tr>\n        <th>ID</th>\n        <th>Date</th>\n        <th>Time</th>\n        <th>Topic</th>\n        <th>Info</th>\n      </tr>\n    </thead>\n    <tbody>\n      <tr>\n        <td data-title=\"ID\">1</td>\n        <td data-title=\"Date\">11/04/2017</td>\n        <td data-title=\"Time\">6:30-9:30</td>\n        <td data-title=\"Topic\">Lesson 1.1 : The Zen of Coding</td>        \n        <td data-title=\"Info\">\n        <a href=\"#\" target=\"_blank\">Info</a>      \n      </td>\n      </tr>\n      <tr>\n        <td data-title=\"ID\">2</td>\n        <td data-title=\"Date\">11/04/2017</td>\n        <td data-title=\"Time\">6:30-9:30</td>\n        <td data-title=\"Topic\">Lesson 1.2 : Git'n Pro with HTML and CSS</td>        \n        <td data-title=\"Info\">\n        <a href=\"#\" target=\"_blank\">Info</a>\n        </td>\n      </tr>\n      <tr>\n        <td data-title=\"ID\">3</td>\n        <td data-title=\"Date\">11/04/2017</td>\n        <td data-title=\"Time\">6:30-9:30</td>\n        <td data-title=\"Topic\">Lesson 1.3 : Heroes of CSS</td>        \n        <td data-title=\"Info\">\n        <a href=\"#\" target=\"_blank\">Info</a>\n        </td>\n      </tr>\n      <tr>\n        <td data-title=\"ID\">4</td>\n        <td data-title=\"Date\">11/04/2017</td>\n        <td data-title=\"Time\">6:30-9:30</td>\n        <td data-title=\"Topic\">Lesson 2.1 : Going Live</td>        \n        <td data-title=\"Info\">\n        <a href=\"#\" target=\"_blank\">Info</a>\n        </td>\n      </tr>\n      <tr>\n        <td data-title=\"ID\">5</td>\n        <td data-title=\"Date\">11/04/2017</td>\n        <td data-title=\"Time\">6:30-9:30</td>\n        <td data-title=\"Topic\">Lesson 2.2 : Down and Dirty CSS</td>        \n        <td data-title=\"Info\">\n        <a href=\"#\" target=\"_blank\">Info</a>\n        </td>\n      </tr>\n      <tr>\n        <td data-title=\"ID\">6</td>\n        <td data-title=\"Date\">11/04/2017</td>\n        <td data-title=\"Time\">6:30-9:30</td>\n        <td data-title=\"Topic\">Lesson 2.3 : Layouts with Bootstrap</td>        \n        <td data-title=\"Info\">\n        <a href=\"#\" target=\"_blank\">Info</a>\n        </td>\n      </tr>\n      <tr>\n        <td data-title=\"ID\">7</td>\n        <td data-title=\"Date\">11/04/2017</td>\n        <td data-title=\"Time\">6:30-9:30</td>\n        <td data-title=\"Topic\">Lesson 3.1 : Joys of JavaScript</td>        \n        <td data-title=\"Info\">\n        <a href=\"#\" target=\"_blank\">Info</a>\n        </td>\n      </tr>\n      <tr>\n        <td data-title=\"ID\">8</td>\n        <td data-title=\"Date\">11/04/2017</td>\n        <td data-title=\"Time\">6:30-9:30</td>\n        <td data-title=\"Topic\">Lesson 3.2 : Jumping for JS</td>        \n        <td data-title=\"Info\">\n        <a href=\"#\" target=\"_blank\">Info</a>\n        </td>\n      </tr>\n      <tr>\n        <td data-title=\"ID\">9</td>\n        <td data-title=\"Date\">11/04/2017</td>\n        <td data-title=\"Time\">6:30-9:30</td>\n        <td data-title=\"Topic\">Lesson 3.3 : JavaScript Juggernauts</td>        \n        <td data-title=\"Info\">\n        <a href=\"#\" target=\"_blank\">Info</a>\n        </td>\n      </tr>\n      <tr>\n        <td data-title=\"ID\">10</td>\n        <td data-title=\"Date\">11/04/2017</td>\n        <td data-title=\"Time\">6:30-9:30</td>\n        <td data-title=\"Topic\">Lesson 4.1 : jQuery Begins</td>        \n        <td data-title=\"Info\">\n        <a href=\"#\" target=\"_blank\">Info</a>\n        </td>\n      </tr>\n      <tr>\n    </tbody>\n  </table>\n</div>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/class-list/class-list.component.scss":
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
@@ -480,20 +487,13 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, "html {\n  background: #ffffff;\n  height: 100%; }\n\ntr {\n  background: linear-gradient(#62c8f3, #5f6568); }\n", ""]);
 
 // exports
 
 
 /*** EXPORTS FROM exports-loader ***/
 module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/class-list/class-list.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<p>\n  class-list works!\n</p>\n"
 
 /***/ }),
 
@@ -524,7 +524,7 @@ ClassListComponent = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-class-list',
         template: __webpack_require__("../../../../../src/app/class-list/class-list.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/class-list/class-list.component.css")]
+        styles: [__webpack_require__("../../../../../src/app/class-list/class-list.component.scss")]
     }),
     __metadata("design:paramtypes", [])
 ], ClassListComponent);
@@ -594,7 +594,14 @@ HomeworkListComponent = __decorate([
 
 /***/ }),
 
-/***/ "../../../../../src/app/login/login.component.css":
+/***/ "../../../../../src/app/login/login.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"section grey lighten-3\">\n  <div class=\"row container\">\n    <h2 class=\"header\">ReBootcampSpot</h2>\n  <p class=\"grey-text text-darken-3 lighten-3\">A better bootcampspot, for both students and administrators</p>\n  </div>\n <div class=\"container align-center\"> \n  <h5>Sign In</h5>\t\t\t\n  <div id=\"googleBtn\" class=\"g-signin2\"></div>\n  </div>\n</div>\n\n   \n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/login/login.component.scss":
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
@@ -602,20 +609,13 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, "html {\n  background: url(" + __webpack_require__("../../../../../src/assets/img/background.jpg") + ") no-repeat center center fixed;\n  background-size: cover; }\n", ""]);
 
 // exports
 
 
 /*** EXPORTS FROM exports-loader ***/
 module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/login/login.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "\n  <div class=\"section grey lighten-3\">\n    <div class=\"row container\">\n      <h2 class=\"header\">ReBootcampSpot</h2>\n\t  <p class=\"grey-text text-darken-3 lighten-3\">A better bootcampspot, for both students and administrators</p>\n\t  </div>\n\t <div class=\"container align-center\"> \n\t  <h5>Sign In</h5>\t\t\t\n\t  <div   id=\"googleBtn\" class=\"g-signin2\"></div>\n    </div>\n  </div>\n"
 
 /***/ }),
 
@@ -681,7 +681,7 @@ LoginComponent = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-login',
         template: __webpack_require__("../../../../../src/app/login/login.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/login/login.component.css")],
+        styles: [__webpack_require__("../../../../../src/app/login/login.component.scss")],
         providers: [__WEBPACK_IMPORTED_MODULE_1_angular2_google_login__["b" /* AuthService */]]
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_angular2_google_login__["b" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_angular2_google_login__["b" /* AuthService */]) === "function" && _b || Object])
@@ -713,7 +713,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/sidebar-nav-collapsed/sidebar-nav-collapsed.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  sidebar-nav-collapsed works!\n</p>\n"
+module.exports = "\n<nav>\n  \n  <ul class=\"side-nav\">\n    <li><a href=\"#!\">Dashboard</a></li>\n    <li><a href=\"#!\">Class List</a></li>\n    <li><a href=\"#!\">Stats</a></li>\n  </ul>\n</nav>\n        "
 
 /***/ }),
 
@@ -1044,6 +1044,13 @@ UserService = __decorate([
 
 var _a;
 //# sourceMappingURL=user.service.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/assets/img/background.jpg":
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "background.53195c65f150fb0c0bed.jpg";
 
 /***/ }),
 
