@@ -4,7 +4,7 @@ import { UserService } from '../user.service';
 import { User } from '../user';
 
 @Component({
-  selector: 'app-student-center',
+  selector: 'student-center',
   templateUrl: './student-center.component.html',
 	styleUrls: ['./student-center.component.css'],
 	providers: [UserService]

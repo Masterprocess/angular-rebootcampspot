@@ -3,6 +3,7 @@
 @import url('//fonts.googleapis.com/icon?family=Material+Icons');
 
 @include mat-core();
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
 
 
 body {
