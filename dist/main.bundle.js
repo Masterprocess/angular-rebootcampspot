@@ -38,7 +38,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/admin-center/admin-center.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  admin-center works!\n</p>\n"
+module.exports = "<p>\n  admin-center works!\n</p>\n<cohort-create>\n</cohort-create>\n\n<user-create>\n</user-create>\n\n<user-list></user-list>\n\n<lesson-create>\n</lesson-create>\n\n<class-list></class-list>\n\n<homework-create>\n</homework-create>\n\n<homework-list></homework-list>\n\n\n\n"
 
 /***/ }),
 
@@ -87,6 +87,11 @@ AdminCenterComponent = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home_home_component__ = __webpack_require__("../../../../../src/app/home/home.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__video_center_video_center_component__ = __webpack_require__("../../../../../src/app/video-center/video-center.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__login_login_component__ = __webpack_require__("../../../../../src/app/login/login.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__admin_center_admin_center_component__ = __webpack_require__("../../../../../src/app/admin-center/admin-center.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__student_center_student_center_component__ = __webpack_require__("../../../../../src/app/student-center/student-center.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__teacher_center_teacher_center_component__ = __webpack_require__("../../../../../src/app/teacher-center/teacher-center.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__user_redirect_user_redirect_component__ = __webpack_require__("../../../../../src/app/user-redirect/user-redirect.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -97,8 +102,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
+
+
+
+
 var routes = [
-    { path: '', redirectTo: '/home', pathMatch: 'full' },
+    { path: '', redirectTo: '/login', pathMatch: 'full' },
+    { path: 'login', component: __WEBPACK_IMPORTED_MODULE_4__login_login_component__["a" /* LoginComponent */] },
+    { path: 'admin', component: __WEBPACK_IMPORTED_MODULE_5__admin_center_admin_center_component__["a" /* AdminCenterComponent */] },
+    { path: 'classcenter', component: __WEBPACK_IMPORTED_MODULE_6__student_center_student_center_component__["a" /* StudentCenterComponent */] },
+    { path: 'teachercenter', component: __WEBPACK_IMPORTED_MODULE_7__teacher_center_teacher_center_component__["a" /* TeacherCenterComponent */] },
+    { path: 'redirect', component: __WEBPACK_IMPORTED_MODULE_8__user_redirect_user_redirect_component__["a" /* UserRedirectComponent */] },
     { path: 'home', component: __WEBPACK_IMPORTED_MODULE_2__home_home_component__["a" /* HomeComponent */] },
     { path: 'videos', component: __WEBPACK_IMPORTED_MODULE_3__video_center_video_center_component__["a" /* VideoCenterComponent */] }
 ];
@@ -186,27 +201,39 @@ AppComponent = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_platform_browser_animations__ = __webpack_require__("../../../platform-browser/@angular/platform-browser/animations.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_angular2_materialize__ = __webpack_require__("../../../../angular2-materialize/dist/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__app_routing_module__ = __webpack_require__("../../../../../src/app/app-routing.module.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__home_home_component__ = __webpack_require__("../../../../../src/app/home/home.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__video_center_video_center_component__ = __webpack_require__("../../../../../src/app/video-center/video-center.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__video_list_video_list_component__ = __webpack_require__("../../../../../src/app/video-list/video-list.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__video_detail_video_detail_component__ = __webpack_require__("../../../../../src/app/video-detail/video-detail.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__safe_pipe__ = __webpack_require__("../../../../../src/app/safe.pipe.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__admin_center_admin_center_component__ = __webpack_require__("../../../../../src/app/admin-center/admin-center.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__student_center_student_center_component__ = __webpack_require__("../../../../../src/app/student-center/student-center.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__teacher_center_teacher_center_component__ = __webpack_require__("../../../../../src/app/teacher-center/teacher-center.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__class_list_class_list_component__ = __webpack_require__("../../../../../src/app/class-list/class-list.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__homework_list_homework_list_component__ = __webpack_require__("../../../../../src/app/homework-list/homework-list.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__user_list_user_list_component__ = __webpack_require__("../../../../../src/app/user-list/user-list.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__footer_footer_component__ = __webpack_require__("../../../../../src/app/footer/footer.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__login_login_component__ = __webpack_require__("../../../../../src/app/login/login.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_material__ = __webpack_require__("../../../material/esm5/material.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__app_routing_module__ = __webpack_require__("../../../../../src/app/app-routing.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__home_home_component__ = __webpack_require__("../../../../../src/app/home/home.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__video_center_video_center_component__ = __webpack_require__("../../../../../src/app/video-center/video-center.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__video_list_video_list_component__ = __webpack_require__("../../../../../src/app/video-list/video-list.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__video_detail_video_detail_component__ = __webpack_require__("../../../../../src/app/video-detail/video-detail.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__safe_pipe__ = __webpack_require__("../../../../../src/app/safe.pipe.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__admin_center_admin_center_component__ = __webpack_require__("../../../../../src/app/admin-center/admin-center.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__student_center_student_center_component__ = __webpack_require__("../../../../../src/app/student-center/student-center.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__teacher_center_teacher_center_component__ = __webpack_require__("../../../../../src/app/teacher-center/teacher-center.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__class_list_class_list_component__ = __webpack_require__("../../../../../src/app/class-list/class-list.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__homework_list_homework_list_component__ = __webpack_require__("../../../../../src/app/homework-list/homework-list.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__user_list_user_list_component__ = __webpack_require__("../../../../../src/app/user-list/user-list.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__footer_footer_component__ = __webpack_require__("../../../../../src/app/footer/footer.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__login_login_component__ = __webpack_require__("../../../../../src/app/login/login.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__user_redirect_user_redirect_component__ = __webpack_require__("../../../../../src/app/user-redirect/user-redirect.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__user_create_user_create_component__ = __webpack_require__("../../../../../src/app/user-create/user-create.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__cohort_create_cohort_create_component__ = __webpack_require__("../../../../../src/app/cohort-create/cohort-create.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__lesson_create_lesson_create_component__ = __webpack_require__("../../../../../src/app/lesson-create/lesson-create.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__homework_create_homework_create_component__ = __webpack_require__("../../../../../src/app/homework-create/homework-create.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
+
+
+
+
 
 
 
@@ -236,31 +263,40 @@ var AppModule = (function () {
 AppModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["M" /* NgModule */])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_7__app_component__["a" /* AppComponent */],
-            __WEBPACK_IMPORTED_MODULE_8__home_home_component__["a" /* HomeComponent */],
-            __WEBPACK_IMPORTED_MODULE_9__video_center_video_center_component__["a" /* VideoCenterComponent */],
-            __WEBPACK_IMPORTED_MODULE_10__video_list_video_list_component__["a" /* VideoListComponent */],
-            __WEBPACK_IMPORTED_MODULE_11__video_detail_video_detail_component__["a" /* VideoDetailComponent */],
-            __WEBPACK_IMPORTED_MODULE_12__safe_pipe__["a" /* SafePipe */],
-            __WEBPACK_IMPORTED_MODULE_13__admin_center_admin_center_component__["a" /* AdminCenterComponent */],
-            __WEBPACK_IMPORTED_MODULE_14__student_center_student_center_component__["a" /* StudentCenterComponent */],
-            __WEBPACK_IMPORTED_MODULE_15__teacher_center_teacher_center_component__["a" /* TeacherCenterComponent */],
-            __WEBPACK_IMPORTED_MODULE_16__class_list_class_list_component__["a" /* ClassListComponent */],
-            __WEBPACK_IMPORTED_MODULE_17__homework_list_homework_list_component__["a" /* HomeworkListComponent */],
-            __WEBPACK_IMPORTED_MODULE_18__user_list_user_list_component__["a" /* UserListComponent */],
-            __WEBPACK_IMPORTED_MODULE_19__footer_footer_component__["a" /* FooterComponent */],
-            __WEBPACK_IMPORTED_MODULE_20__login_login_component__["a" /* LoginComponent */]
+            __WEBPACK_IMPORTED_MODULE_8__app_component__["a" /* AppComponent */],
+            __WEBPACK_IMPORTED_MODULE_9__home_home_component__["a" /* HomeComponent */],
+            __WEBPACK_IMPORTED_MODULE_10__video_center_video_center_component__["a" /* VideoCenterComponent */],
+            __WEBPACK_IMPORTED_MODULE_11__video_list_video_list_component__["a" /* VideoListComponent */],
+            __WEBPACK_IMPORTED_MODULE_12__video_detail_video_detail_component__["a" /* VideoDetailComponent */],
+            __WEBPACK_IMPORTED_MODULE_13__safe_pipe__["a" /* SafePipe */],
+            __WEBPACK_IMPORTED_MODULE_14__admin_center_admin_center_component__["a" /* AdminCenterComponent */],
+            __WEBPACK_IMPORTED_MODULE_15__student_center_student_center_component__["a" /* StudentCenterComponent */],
+            __WEBPACK_IMPORTED_MODULE_16__teacher_center_teacher_center_component__["a" /* TeacherCenterComponent */],
+            __WEBPACK_IMPORTED_MODULE_17__class_list_class_list_component__["a" /* ClassListComponent */],
+            __WEBPACK_IMPORTED_MODULE_18__homework_list_homework_list_component__["a" /* HomeworkListComponent */],
+            __WEBPACK_IMPORTED_MODULE_19__user_list_user_list_component__["a" /* UserListComponent */],
+            __WEBPACK_IMPORTED_MODULE_20__footer_footer_component__["a" /* FooterComponent */],
+            __WEBPACK_IMPORTED_MODULE_21__login_login_component__["a" /* LoginComponent */],
+            __WEBPACK_IMPORTED_MODULE_22__user_redirect_user_redirect_component__["a" /* UserRedirectComponent */],
+            __WEBPACK_IMPORTED_MODULE_23__user_create_user_create_component__["a" /* UserCreateComponent */],
+            __WEBPACK_IMPORTED_MODULE_24__cohort_create_cohort_create_component__["a" /* CohortCreateComponent */],
+            __WEBPACK_IMPORTED_MODULE_25__lesson_create_lesson_create_component__["a" /* LessonCreateComponent */],
+            __WEBPACK_IMPORTED_MODULE_26__homework_create_homework_create_component__["a" /* HomeworkCreateComponent */]
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
-            __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormsModule */],
+            __WEBPACK_IMPORTED_MODULE_2__angular_forms__["c" /* FormsModule */],
             __WEBPACK_IMPORTED_MODULE_3__angular_http__["c" /* HttpModule */],
-            __WEBPACK_IMPORTED_MODULE_6__app_routing_module__["a" /* AppRoutingModule */],
+            __WEBPACK_IMPORTED_MODULE_7__app_routing_module__["a" /* AppRoutingModule */],
             __WEBPACK_IMPORTED_MODULE_4__angular_platform_browser_animations__["a" /* BrowserAnimationsModule */],
-            __WEBPACK_IMPORTED_MODULE_5_angular2_materialize__["a" /* MaterializeModule */]
+            __WEBPACK_IMPORTED_MODULE_5_angular2_materialize__["a" /* MaterializeModule */],
+            __WEBPACK_IMPORTED_MODULE_6__angular_material__["d" /* MatSidenavModule */],
+            __WEBPACK_IMPORTED_MODULE_6__angular_material__["a" /* MatButtonModule */],
+            __WEBPACK_IMPORTED_MODULE_6__angular_material__["b" /* MatCheckboxModule */],
+            __WEBPACK_IMPORTED_MODULE_6__angular_material__["c" /* MatProgressBarModule */]
         ],
         providers: [],
-        bootstrap: [__WEBPACK_IMPORTED_MODULE_7__app_component__["a" /* AppComponent */]]
+        bootstrap: [__WEBPACK_IMPORTED_MODULE_8__app_component__["a" /* AppComponent */]]
     })
 ], AppModule);
 
@@ -318,7 +354,7 @@ var ClassListComponent = (function () {
 }());
 ClassListComponent = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
-        selector: 'app-class-list',
+        selector: 'class-list',
         template: __webpack_require__("../../../../../src/app/class-list/class-list.component.html"),
         styles: [__webpack_require__("../../../../../src/app/class-list/class-list.component.css")]
     }),
@@ -326,6 +362,67 @@ ClassListComponent = __decorate([
 ], ClassListComponent);
 
 //# sourceMappingURL=class-list.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/cohort-create/cohort-create.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/cohort-create/cohort-create.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<p>\n  cohort-create works!\n</p>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/cohort-create/cohort-create.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CohortCreateComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var CohortCreateComponent = (function () {
+    function CohortCreateComponent() {
+    }
+    CohortCreateComponent.prototype.ngOnInit = function () {
+    };
+    return CohortCreateComponent;
+}());
+CohortCreateComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+        selector: 'cohort-create',
+        template: __webpack_require__("../../../../../src/app/cohort-create/cohort-create.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/cohort-create/cohort-create.component.css")]
+    }),
+    __metadata("design:paramtypes", [])
+], CohortCreateComponent);
+
+//# sourceMappingURL=cohort-create.component.js.map
 
 /***/ }),
 
@@ -452,6 +549,67 @@ HomeComponent = __decorate([
 
 /***/ }),
 
+/***/ "../../../../../src/app/homework-create/homework-create.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/homework-create/homework-create.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<p>\n  homework-create works!\n</p>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/homework-create/homework-create.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomeworkCreateComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var HomeworkCreateComponent = (function () {
+    function HomeworkCreateComponent() {
+    }
+    HomeworkCreateComponent.prototype.ngOnInit = function () {
+    };
+    return HomeworkCreateComponent;
+}());
+HomeworkCreateComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+        selector: 'homework-create',
+        template: __webpack_require__("../../../../../src/app/homework-create/homework-create.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/homework-create/homework-create.component.css")]
+    }),
+    __metadata("design:paramtypes", [])
+], HomeworkCreateComponent);
+
+//# sourceMappingURL=homework-create.component.js.map
+
+/***/ }),
+
 /***/ "../../../../../src/app/homework-list/homework-list.component.css":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -502,7 +660,7 @@ var HomeworkListComponent = (function () {
 }());
 HomeworkListComponent = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
-        selector: 'app-homework-list',
+        selector: 'homework-list',
         template: __webpack_require__("../../../../../src/app/homework-list/homework-list.component.html"),
         styles: [__webpack_require__("../../../../../src/app/homework-list/homework-list.component.css")]
     }),
@@ -510,6 +668,67 @@ HomeworkListComponent = __decorate([
 ], HomeworkListComponent);
 
 //# sourceMappingURL=homework-list.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/lesson-create/lesson-create.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/lesson-create/lesson-create.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<p>\n  lesson-create works!\n</p>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/lesson-create/lesson-create.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LessonCreateComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var LessonCreateComponent = (function () {
+    function LessonCreateComponent() {
+    }
+    LessonCreateComponent.prototype.ngOnInit = function () {
+    };
+    return LessonCreateComponent;
+}());
+LessonCreateComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+        selector: 'lesson-create',
+        template: __webpack_require__("../../../../../src/app/lesson-create/lesson-create.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/lesson-create/lesson-create.component.css")]
+    }),
+    __metadata("design:paramtypes", [])
+], LessonCreateComponent);
+
+//# sourceMappingURL=lesson-create.component.js.map
 
 /***/ }),
 
@@ -773,6 +992,67 @@ TeacherCenterComponent = __decorate([
 
 /***/ }),
 
+/***/ "../../../../../src/app/user-create/user-create.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/user-create/user-create.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<p>\n  user-create works!\n</p>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/user-create/user-create.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UserCreateComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var UserCreateComponent = (function () {
+    function UserCreateComponent() {
+    }
+    UserCreateComponent.prototype.ngOnInit = function () {
+    };
+    return UserCreateComponent;
+}());
+UserCreateComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+        selector: 'user-create',
+        template: __webpack_require__("../../../../../src/app/user-create/user-create.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/user-create/user-create.component.css")]
+    }),
+    __metadata("design:paramtypes", [])
+], UserCreateComponent);
+
+//# sourceMappingURL=user-create.component.js.map
+
+/***/ }),
+
 /***/ "../../../../../src/app/user-list/user-list.component.css":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -823,7 +1103,7 @@ var UserListComponent = (function () {
 }());
 UserListComponent = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
-        selector: 'app-user-list',
+        selector: 'user-list',
         template: __webpack_require__("../../../../../src/app/user-list/user-list.component.html"),
         styles: [__webpack_require__("../../../../../src/app/user-list/user-list.component.css")]
     }),
@@ -831,6 +1111,67 @@ UserListComponent = __decorate([
 ], UserListComponent);
 
 //# sourceMappingURL=user-list.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/user-redirect/user-redirect.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/user-redirect/user-redirect.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"container\">\n\t<div class=\"row center-align\">\n\t\t<div class=\"col s12 \">\n\t\t\t<h3>Welcome to Rebootcampspot!</h3>\n\t\t</div>\n\t</div>\n\t<div class=\"row center-align\">\n\t\t<div class=\"col s12\">\n\t\t\t<mat-progress-bar\tmode=\"indeterminate\">\n\t\t\t</mat-progress-bar>\n\t\t</div>\n\t<div class=\"row center-align\">\n\t\t<div class=\"col s12\">\n\t\t\t<p>Please be patient</p>\n\t\t</div>\n\t</div>\n</div>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/user-redirect/user-redirect.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UserRedirectComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var UserRedirectComponent = (function () {
+    function UserRedirectComponent() {
+    }
+    UserRedirectComponent.prototype.ngOnInit = function () {
+    };
+    return UserRedirectComponent;
+}());
+UserRedirectComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+        selector: 'app-user-redirect',
+        template: __webpack_require__("../../../../../src/app/user-redirect/user-redirect.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/user-redirect/user-redirect.component.css")]
+    }),
+    __metadata("design:paramtypes", [])
+], UserRedirectComponent);
+
+//# sourceMappingURL=user-redirect.component.js.map
 
 /***/ }),
 
