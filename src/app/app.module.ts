@@ -22,6 +22,10 @@ import { UserListComponent } from './user-list/user-list.component';
 import { FooterComponent } from './footer/footer.component';
 import { LoginComponent } from './login/login.component';
 import { UserRedirectComponent } from './user-redirect/user-redirect.component';
+import { UserCreateComponent } from './user-create/user-create.component';
+import { CohortCreateComponent } from './cohort-create/cohort-create.component';
+import { LessonCreateComponent } from './lesson-create/lesson-create.component';
+import { HomeworkCreateComponent } from './homework-create/homework-create.component';
 
 
 @NgModule({
@@ -40,7 +44,11 @@ import { UserRedirectComponent } from './user-redirect/user-redirect.component';
     UserListComponent,
 		FooterComponent,
 		LoginComponent,
-		UserRedirectComponent
+		UserRedirectComponent,
+		UserCreateComponent,
+		CohortCreateComponent,
+		LessonCreateComponent,
+		HomeworkCreateComponent
   ],
   imports: [
     BrowserModule,
@@ -48,7 +56,11 @@ import { UserRedirectComponent } from './user-redirect/user-redirect.component';
     HttpModule,
 		AppRoutingModule,
 		BrowserAnimationsModule,
-		MaterializeModule
+		MaterializeModule,
+		MatSidenavModule, 
+		MatButtonModule, 
+		MatCheckboxModule, 
+		MatProgressBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

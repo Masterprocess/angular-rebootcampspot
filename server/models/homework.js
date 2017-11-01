@@ -8,7 +8,7 @@ const homeworkSchema = new Schema({
 		cohort: String,
 		due: Date,
 		hwlink: Array,
-		comments: [{user: string, comment: string}]
+		//comments: [{user: string, comment: string}]
 });
 
 module.exports = mongoose.model('homework', homeworkSchema, 'homeworks');
