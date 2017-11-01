@@ -479,7 +479,14 @@ ClassCreationComponent = __decorate([
 
 /***/ }),
 
-/***/ "../../../../../src/app/class-list/class-list.component.css":
+/***/ "../../../../../src/app/class-list/class-list.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<table id=\"table\" class=\"responsive-table table-hover table-mc-light-blue\">\n    <thead>\n      <tr>\n        <th>ID</th>\n        <th>Date</th>\n        <th>Time</th>\n        <th>Topic</th>\n        <th>Info</th>\n      </tr>\n    </thead>\n    <tbody>\n      <tr>\n        <td data-title=\"ID\">1</td>\n        <td data-title=\"Date\">11/04/2017</td>\n        <td data-title=\"Time\">6:30-9:30</td>\n        <td data-title=\"Topic\">Lesson 1.1 : The Zen of Coding</td>        \n        <td data-title=\"Info\">\n        <a href=\"#\" target=\"_blank\">Info</a>      \n      </td>\n      </tr>\n      <tr>\n        <td data-title=\"ID\">2</td>\n        <td data-title=\"Date\">11/04/2017</td>\n        <td data-title=\"Time\">6:30-9:30</td>\n        <td data-title=\"Topic\">Lesson 1.2 : Git'n Pro with HTML and CSS</td>        \n        <td data-title=\"Info\">\n        <a href=\"#\" target=\"_blank\">Info</a>\n        </td>\n      </tr>\n      <tr>\n        <td data-title=\"ID\">3</td>\n        <td data-title=\"Date\">11/04/2017</td>\n        <td data-title=\"Time\">6:30-9:30</td>\n        <td data-title=\"Topic\">Lesson 1.3 : Heroes of CSS</td>        \n        <td data-title=\"Info\">\n        <a href=\"#\" target=\"_blank\">Info</a>\n        </td>\n      </tr>\n      <tr>\n        <td data-title=\"ID\">4</td>\n        <td data-title=\"Date\">11/04/2017</td>\n        <td data-title=\"Time\">6:30-9:30</td>\n        <td data-title=\"Topic\">Lesson 2.1 : Going Live</td>        \n        <td data-title=\"Info\">\n        <a href=\"#\" target=\"_blank\">Info</a>\n        </td>\n      </tr>\n      <tr>\n        <td data-title=\"ID\">5</td>\n        <td data-title=\"Date\">11/04/2017</td>\n        <td data-title=\"Time\">6:30-9:30</td>\n        <td data-title=\"Topic\">Lesson 2.2 : Down and Dirty CSS</td>        \n        <td data-title=\"Info\">\n        <a href=\"#\" target=\"_blank\">Info</a>\n        </td>\n      </tr>\n      <tr>\n        <td data-title=\"ID\">6</td>\n        <td data-title=\"Date\">11/04/2017</td>\n        <td data-title=\"Time\">6:30-9:30</td>\n        <td data-title=\"Topic\">Lesson 2.3 : Layouts with Bootstrap</td>        \n        <td data-title=\"Info\">\n        <a href=\"#\" target=\"_blank\">Info</a>\n        </td>\n      </tr>\n      <tr>\n        <td data-title=\"ID\">7</td>\n        <td data-title=\"Date\">11/04/2017</td>\n        <td data-title=\"Time\">6:30-9:30</td>\n        <td data-title=\"Topic\">Lesson 3.1 : Joys of JavaScript</td>        \n        <td data-title=\"Info\">\n        <a href=\"#\" target=\"_blank\">Info</a>\n        </td>\n      </tr>\n      <tr>\n        <td data-title=\"ID\">8</td>\n        <td data-title=\"Date\">11/04/2017</td>\n        <td data-title=\"Time\">6:30-9:30</td>\n        <td data-title=\"Topic\">Lesson 3.2 : Jumping for JS</td>        \n        <td data-title=\"Info\">\n        <a href=\"#\" target=\"_blank\">Info</a>\n        </td>\n      </tr>\n      <tr>\n        <td data-title=\"ID\">9</td>\n        <td data-title=\"Date\">11/04/2017</td>\n        <td data-title=\"Time\">6:30-9:30</td>\n        <td data-title=\"Topic\">Lesson 3.3 : JavaScript Juggernauts</td>        \n        <td data-title=\"Info\">\n        <a href=\"#\" target=\"_blank\">Info</a>\n        </td>\n      </tr>\n      <tr>\n        <td data-title=\"ID\">10</td>\n        <td data-title=\"Date\">11/04/2017</td>\n        <td data-title=\"Time\">6:30-9:30</td>\n        <td data-title=\"Topic\">Lesson 4.1 : jQuery Begins</td>        \n        <td data-title=\"Info\">\n        <a href=\"#\" target=\"_blank\">Info</a>\n        </td>\n      </tr>\n      <tr>\n    </tbody>\n  </table>\n</div>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/class-list/class-list.component.scss":
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
@@ -487,20 +494,13 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, "html {\n  background: #ffffff;\n  height: 100%; }\n\ntr {\n  background: linear-gradient(#62c8f3, #5f6568); }\n", ""]);
 
 // exports
 
 
 /*** EXPORTS FROM exports-loader ***/
 module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/class-list/class-list.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<p>\n  class-list works!\n</p>\n"
 
 /***/ }),
 
@@ -531,7 +531,7 @@ ClassListComponent = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'class-list',
         template: __webpack_require__("../../../../../src/app/class-list/class-list.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/class-list/class-list.component.css")]
+        styles: [__webpack_require__("../../../../../src/app/class-list/class-list.component.scss")]
     }),
     __metadata("design:paramtypes", [])
 ], ClassListComponent);
@@ -601,7 +601,14 @@ HomeworkListComponent = __decorate([
 
 /***/ }),
 
-/***/ "../../../../../src/app/login/login.component.css":
+/***/ "../../../../../src/app/login/login.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"section grey lighten-3\">\n  <div class=\"row container\">\n    <h2 class=\"header\">ReBootcampSpot</h2>\n  <p class=\"grey-text text-darken-3 lighten-3\">A better bootcampspot, for both students and administrators</p>\n  </div>\n <div class=\"container align-center\"> \n  <h5>Sign In</h5>\t\t\t\n  <div id=\"googleBtn\" class=\"g-signin2\"></div>\n  </div>\n</div>\n\n   \n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/login/login.component.scss":
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
@@ -609,7 +616,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, "html {\n  background: url(" + __webpack_require__("../../../../../src/assets/img/background.jpg") + ") no-repeat center center fixed;\n  background-size: cover; }\n", ""]);
 
 // exports
 
@@ -619,12 +626,6 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
-/***/ "../../../../../src/app/login/login.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "\n  <div class=\"section grey lighten-3\">\n    <div class=\"row container\">\n      <h2 class=\"header\">ReBootcampSpot</h2>\n\t  <p class=\"grey-text text-darken-3 lighten-3\">A better bootcampspot, for both students and administrators</p>\n\t  </div>\n\t <div class=\"container align-center\"> \n\t  <h5>Sign In</h5>\t\t\t\n\t  <div id=\"googleBtn\" class=\"g-signin2\"></div>\n    </div>\n  </div>\n"
-
-/***/ }),
 
 /***/ "../../../../../src/app/login/login.component.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -688,7 +689,7 @@ LoginComponent = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-login',
         template: __webpack_require__("../../../../../src/app/login/login.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/login/login.component.css")],
+        styles: [__webpack_require__("../../../../../src/app/login/login.component.scss")],
         providers: [__WEBPACK_IMPORTED_MODULE_1_angular2_google_login__["b" /* AuthService */]]
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_angular2_google_login__["b" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_angular2_google_login__["b" /* AuthService */]) === "function" && _b || Object])
@@ -720,7 +721,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/sidebar-nav-collapsed/sidebar-nav-collapsed.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  sidebar-nav-collapsed works!\n</p>\n"
+module.exports = "\n<nav>\n  \n  <ul class=\"side-nav\">\n    <li><a href=\"#!\">Dashboard</a></li>\n    <li><a href=\"#!\">Class List</a></li>\n    <li><a href=\"#!\">Stats</a></li>\n  </ul>\n</nav>\n        "
 
 /***/ }),
 
@@ -1112,6 +1113,13 @@ UserService = __decorate([
 
 var _a;
 //# sourceMappingURL=user.service.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/assets/img/background.jpg":
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "background.53195c65f150fb0c0bed.jpg";
 
 /***/ }),
 
