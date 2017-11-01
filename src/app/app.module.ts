@@ -26,6 +26,7 @@ import { UserCreateComponent } from './user-create/user-create.component';
 import { CohortCreateComponent } from './cohort-create/cohort-create.component';
 import { LessonCreateComponent } from './lesson-create/lesson-create.component';
 import { HomeworkCreateComponent } from './homework-create/homework-create.component';
+import { MainFooterComponent } from './main-footer/main-footer.component';
 
 
 @NgModule({
@@ -48,7 +49,8 @@ import { HomeworkCreateComponent } from './homework-create/homework-create.compo
 		UserCreateComponent,
 		CohortCreateComponent,
 		LessonCreateComponent,
-		HomeworkCreateComponent
+		HomeworkCreateComponent,
+		MainFooterComponent
   ],
   imports: [
     BrowserModule,
