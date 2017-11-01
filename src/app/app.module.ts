@@ -2,6 +2,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterializeModule } from 'angular2-materialize';
+import { MatSidenavModule, MatButtonModule, MatCheckboxModule, MatProgressBarModule } from '@angular/material';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,6 +19,8 @@ import { TeacherCenterComponent } from './teacher-center/teacher-center.componen
 import { ClassListComponent } from './class-list/class-list.component';
 import { HomeworkListComponent } from './homework-list/homework-list.component';
 import { UserListComponent } from './user-list/user-list.component';
+import { FooterComponent } from './footer/footer.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -30,13 +35,17 @@ import { UserListComponent } from './user-list/user-list.component';
     TeacherCenterComponent,
     ClassListComponent,
     HomeworkListComponent,
-    UserListComponent
+    UserListComponent,
+		FooterComponent,
+		LoginComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    AppRoutingModule
+		AppRoutingModule,
+		BrowserAnimationsModule,
+		MaterializeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
