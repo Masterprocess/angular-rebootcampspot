@@ -38,7 +38,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/admin-center/admin-center.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  admin-center works!\n</p>\n<cohort-create>\n</cohort-create>\n\n<user-create>\n</user-create>\n\n<user-list></user-list>\n\n<lesson-create>\n</lesson-create>\n\n<class-list></class-list>\n\n<homework-create>\n</homework-create>\n\n<homework-list></homework-list>\n\n\n\n"
+module.exports = "<p>\n  admin-center works!\n</p>\n<cohort-create>\n</cohort-create>\n\n<user-create>\n</user-create>\n\n<user-list></user-list>\n\n<lesson-create>\n</lesson-create>\n\n<class-list></class-list>\n\n<homework-create>\n</homework-create>\n\n<homework-list></homework-list>\n<app-main-footer></app-main-footer>\n\n\n\n"
 
 /***/ }),
 
@@ -147,7 +147,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-inverse\">\n  <div class=\"container-fluid\">\n    <div class=\"navbar-header\">\n      <a class=\"navbar-brand\" href=\"#\">VideoPlayer</a>\n    </div>\n    <ul class=\"nav navbar-nav\">\n    <li><a routerLink=\"/home\" routerLinkActive=\"active\">Home</a></li>\n    <li><a routerLink=\"/videos\" routerLinkActive=\"active\">Playlist</a></li>            \n    </ul>\n  </div>\n</nav>    \n<div class=\"container\">\n  <router-outlet></router-outlet>            \n</div>\n"
+module.exports = "<nav class=\"navbar navbar-inverse\">\n  <div class=\"container-fluid\">\n    <div class=\"navbar-header\">\n      <a class=\"navbar-brand\" href=\"#\">VideoPlayer</a>\n    </div>\n    <ul class=\"nav navbar-nav\">\n    <li><a routerLink=\"/home\" routerLinkActive=\"active\">Home</a></li>\n    <li><a routerLink=\"/videos\" routerLinkActive=\"active\">Playlist</a></li>            \n    </ul>\n  </div>\n</nav>    \n<router-outlet></router-outlet>            \n\n"
 
 /***/ }),
 
@@ -221,6 +221,7 @@ var user_create_component_1 = __webpack_require__("../../../../../src/app/user-c
 var cohort_create_component_1 = __webpack_require__("../../../../../src/app/cohort-create/cohort-create.component.ts");
 var lesson_create_component_1 = __webpack_require__("../../../../../src/app/lesson-create/lesson-create.component.ts");
 var homework_create_component_1 = __webpack_require__("../../../../../src/app/homework-create/homework-create.component.ts");
+var main_footer_component_1 = __webpack_require__("../../../../../src/app/main-footer/main-footer.component.ts");
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -245,7 +246,8 @@ var AppModule = /** @class */ (function () {
                 user_create_component_1.UserCreateComponent,
                 cohort_create_component_1.CohortCreateComponent,
                 lesson_create_component_1.LessonCreateComponent,
-                homework_create_component_1.HomeworkCreateComponent
+                homework_create_component_1.HomeworkCreateComponent,
+                main_footer_component_1.MainFooterComponent
             ],
             imports: [
                 platform_browser_1.BrowserModule,
@@ -597,7 +599,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/homework-list/homework-list.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  homework-list works!\n</p>\n"
+module.exports = "<div class=\"col s12 m6\">\n      <div class=\"card blue-grey darken-1\">\n          <div class=\"card-content\">\n            <span class=\"card-title\">Homework</span>\n            <ul class=\"collapsible\" data-collapsible=\"accordion\">\n                <li>\n                  <div class=\"collapsible-header\"><i class=\"material-icons\">filter_drama</i>Homework 1</div>\n                  <div class=\"collapsible-body\"><span>Lorem ipsum dolor sit amet.</span></div>\n                </li>\n                <li>\n                  <div class=\"collapsible-header\"><i class=\"material-icons\">place</i>Homework 2</div>\n                  <div class=\"collapsible-body\"><span>Lorem ipsum dolor sit amet.</span></div>\n                </li>\n                <li>\n                  <div class=\"collapsible-header\"><i class=\"material-icons\">whatshot</i>Homework 3</div>\n                  <div class=\"collapsible-body\"><span>Lorem ipsum dolor sit amet.</span></div>\n                </li>\n              </ul>\n          </div>\n          <div class=\"card-action\">\n            <a href=\"#\">This is a link</a>\n            <a href=\"#\">This is a link</a>\n          </div>\n      </div>\n  </div>\n\n\n      "
 
 /***/ }),
 
@@ -706,7 +708,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, ".image {\r\n    background-image: url(" + __webpack_require__("../../../../../src/assets/images/parallax15.jpg") + ");\r\n    position: relative;\r\n}\r\n\r\n.section {\r\n        background-color: rgba(148, 148, 141, 0.40);\r\n        position: absolute;\r\n        top: 0;\r\n        left: 0;\r\n        width: 100%;\r\n        height: 50%;\r\n    }\r\n", ""]);
 
 // exports
 
@@ -719,7 +721,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/login/login.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"section grey lighten-3\">\n  <div class=\"row container\">\n    <h2 class=\"header\">ReBootcampSpot</h2>\n  <p class=\"grey-text text-darken-3 lighten-3\">A better bootcampspot, for both students and administrators</p>\n  </div>\n <div class=\"container align-center\"> \n  <h5>Sign In</h5>\t\t\t\n  <div id=\"googleBtn\" class=\"g-signin2\"></div>\n  </div>\n</div>\n\n<div [ngStyle]=\"{'background-image': getUrl()}\"></div>\n\n   \n"
+module.exports = "\n<div class=\"image\">\n  <br><br><br><br><br><br><br><br><br><br><br><br>\n<div class=\"section\">\n  <div class=\"row container\">\n    <h2 class=\"header\">ReBootcampSpot</h2>\n  <p class=\"grey-text text-darken-3 lighten-3\">A better bootcampspot, for both students and administrators</p>\n  </div>\n <div class=\"container align-center\"> \n  <h5>Sign In</h5>\t\t\t\n  <div id=\"googleBtn\" class=\"g-signin2\"></div>\n  </div>\n</div>\n\n<div [ngStyle]=\"{'background-image': getUrl()}\"></div>\n<br><br><br><br><br><br><br><br><br><br><br><br><br><br>\n</div>\n\n\n   \n"
 
 /***/ }),
 
@@ -792,22 +794,69 @@ var LoginComponent = /** @class */ (function () {
     return LoginComponent;
     var _a, _b;
 }());
-<<<<<<< HEAD
 exports.LoginComponent = LoginComponent;
-=======
-LoginComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
-        selector: 'app-login',
-        template: __webpack_require__("../../../../../src/app/login/login.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/login/login.component.css")],
-        providers: [__WEBPACK_IMPORTED_MODULE_1_angular2_google_login__["b" /* AuthService */]]
-    }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_angular2_google_login__["b" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_angular2_google_login__["b" /* AuthService */]) === "function" && _b || Object])
-], LoginComponent);
-
-var _a, _b;
->>>>>>> chris
 //# sourceMappingURL=login.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/main-footer/main-footer.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/main-footer/main-footer.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<footer class=\"page-footer grey \">\n <div class=\"container\">\n   <div class=\"row\">\n     <div class=\"col l6 s12\">\n       <h5 class=\"white-text\">ReBootcampSpot</h5>\n       <p class=\"grey-text text-lighten-4\">Making a better BootcampSpot for all of us</p>\n     </div>\n     <div class=\"col l4 offset-l2 s12\">\n       <h5 class=\"white-text\">Links</h5>\n       <ul>\n         <li><a class=\"grey-text text-lighten-3\" href=\"#!\">DashBoard</a></li>\n         <li><a class=\"grey-text text-lighten-3\" href=\"#!\">Calendar</a></li>\n         <li><a class=\"grey-text text-lighten-3\" href=\"#!\">Stats</a></li>\n         \n       </ul>\n     </div>\n   </div>\n </div>\n <div class=\"footer-copyright\">\n   <div class=\"container\">\n   © 2017 Copyright Caroline Bowes, Li Chen, Chris Rackley, and Adrian Fahrer\n   </div>\n </div>\n</footer>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/main-footer/main-footer.component.ts":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__("../../../core/@angular/core.es5.js");
+var MainFooterComponent = /** @class */ (function () {
+    function MainFooterComponent() {
+    }
+    MainFooterComponent.prototype.ngOnInit = function () {
+    };
+    MainFooterComponent = __decorate([
+        core_1.Component({
+            selector: 'app-main-footer',
+            template: __webpack_require__("../../../../../src/app/main-footer/main-footer.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/main-footer/main-footer.component.css")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], MainFooterComponent);
+    return MainFooterComponent;
+}());
+exports.MainFooterComponent = MainFooterComponent;
+//# sourceMappingURL=main-footer.component.js.map
 
 /***/ }),
 
@@ -868,7 +917,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/student-center/student-center.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  student-center works!\n</p>\n"
+module.exports = "<p>\n  student-center works!\n</p>\n<div class=\"row\">\n  <homework-list></homework-list>\n</div>\n\n<app-main-footer></app-main-footer>"
 
 /***/ }),
 
@@ -1478,6 +1527,13 @@ var Video = /** @class */ (function () {
 }());
 exports.Video = Video;
 //# sourceMappingURL=video.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/assets/images/parallax15.jpg":
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "parallax15.4ab74623896cc5d90264.jpg";
 
 /***/ }),
 
