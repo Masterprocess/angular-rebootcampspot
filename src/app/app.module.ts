@@ -16,7 +16,6 @@ import { SafePipe } from './safe.pipe';
 import { AdminCenterComponent } from './admin-center/admin-center.component';
 import { StudentCenterComponent } from './student-center/student-center.component';
 import { TeacherCenterComponent } from './teacher-center/teacher-center.component';
-import { ClassListComponent } from './class-list/class-list.component';
 import { HomeworkListComponent } from './homework-list/homework-list.component';
 import { UserListComponent } from './user-list/user-list.component';
 import { FooterComponent } from './footer/footer.component';
@@ -26,6 +25,12 @@ import { UserCreateComponent } from './user-create/user-create.component';
 import { CohortCreateComponent } from './cohort-create/cohort-create.component';
 import { LessonCreateComponent } from './lesson-create/lesson-create.component';
 import { HomeworkCreateComponent } from './homework-create/homework-create.component';
+import { LessonListComponent } from './lesson-list/lesson-list.component';
+import { CohortDetailComponent } from './cohort-detail/cohort-detail.component';
+import { UserDetailComponent } from './user-detail/user-detail.component';
+import { HomeworkDetailComponent } from './homework-detail/homework-detail.component';
+import { LessonDetailComponent } from './lesson-detail/lesson-detail.component';
+import { CohortListComponent } from './cohort-list/cohort-list.component';
 import { MainFooterComponent } from './main-footer/main-footer.component';
 
 
@@ -40,7 +45,6 @@ import { MainFooterComponent } from './main-footer/main-footer.component';
     AdminCenterComponent,
     StudentCenterComponent,
     TeacherCenterComponent,
-    ClassListComponent,
     HomeworkListComponent,
     UserListComponent,
 		FooterComponent,
@@ -50,6 +54,12 @@ import { MainFooterComponent } from './main-footer/main-footer.component';
 		CohortCreateComponent,
 		LessonCreateComponent,
 		HomeworkCreateComponent,
+		LessonListComponent,
+		CohortDetailComponent,
+		UserDetailComponent,
+		HomeworkDetailComponent,
+		LessonDetailComponent,
+		CohortListComponent
 		MainFooterComponent
   ],
   imports: [
