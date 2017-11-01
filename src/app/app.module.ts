@@ -10,6 +10,12 @@ import { VideoCenterComponent } from './video-center/video-center.component';
 import { VideoListComponent } from './video-list/video-list.component';
 import { VideoDetailComponent } from './video-detail/video-detail.component';
 import { SafePipe } from './safe.pipe';
+import { AdminCenterComponent } from './admin-center/admin-center.component';
+import { StudentCenterComponent } from './student-center/student-center.component';
+import { TeacherCenterComponent } from './teacher-center/teacher-center.component';
+import { ClassListComponent } from './class-list/class-list.component';
+import { HomeworkListComponent } from './homework-list/homework-list.component';
+import { UserListComponent } from './user-list/user-list.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +24,13 @@ import { SafePipe } from './safe.pipe';
     VideoCenterComponent,
     VideoListComponent,
     VideoDetailComponent,
-    SafePipe
+    SafePipe,
+    AdminCenterComponent,
+    StudentCenterComponent,
+    TeacherCenterComponent,
+    ClassListComponent,
+    HomeworkListComponent,
+    UserListComponent
   ],
   imports: [
     BrowserModule,
