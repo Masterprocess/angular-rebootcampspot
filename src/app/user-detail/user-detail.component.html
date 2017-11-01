@@ -1,0 +1,25 @@
+<div>
+    <iframe width="100%" height="500" [src]="user.url | safe" frameborder="0" allowfullscreen>
+    </iframe>
+</div>
+<div>
+    <form>  
+        <h3 *ngIf="!editTitle" (click)="onTitleClick()">{{user.title}}</h3>     
+        <div *ngIf="editTitle" class="form-group">
+            <input type="input" class="form-control" name="title" required placeholder="title"
+            [(ngModel)]="user.title">
+        </div>
+        <div class="form-group">
+            <input type="input" class="form-control" name="url" required placeholder="url"
+            [(ngModel)]="user.url">
+        </div>
+        <div class="form-group">
+            <textarea class="form-control" rows="5" name="desc" [(ngModel)]="user.description">
+            </textarea>
+				</div>
+				<div style="margin-bottom: 50px;"> 
+        <button type="button" (click)="updateUser()" class="btn btn-primary">Update</button>  
+				<button type="button" (click)="deleteUser()" class="btn btn-danger">Delete</button>
+				</div>    
+    </form>
+</div>
