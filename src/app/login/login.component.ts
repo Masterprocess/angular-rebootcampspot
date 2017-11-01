@@ -25,6 +25,10 @@ export class LoginComponent implements OnInit,AfterViewInit {
     
   }
 
+	getUrl()
+	{
+		return "url('./assets/ourImages/background.jpg')";
+	}
  
   public googleInit() {
     gapi.load('auth2', () => {
