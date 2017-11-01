@@ -161,6 +161,7 @@ AdminCenterComponent = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__student_center_student_center_component__ = __webpack_require__("../../../../../src/app/student-center/student-center.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__login_login_component__ = __webpack_require__("../../../../../src/app/login/login.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__student_creation_student_creation_component__ = __webpack_require__("../../../../../src/app/student-creation/student-creation.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__user_redirect_user_redirect_component__ = __webpack_require__("../../../../../src/app/user-redirect/user-redirect.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -173,12 +174,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
 var routes = [
     { path: '', redirectTo: '/login', pathMatch: 'full' },
     { path: 'login', component: __WEBPACK_IMPORTED_MODULE_4__login_login_component__["a" /* LoginComponent */] },
     { path: 'admin', component: __WEBPACK_IMPORTED_MODULE_2__admin_center_admin_center_component__["a" /* AdminCenterComponent */] },
     { path: 'student', component: __WEBPACK_IMPORTED_MODULE_3__student_center_student_center_component__["a" /* StudentCenterComponent */] },
-    { path: 'buildstudent', component: __WEBPACK_IMPORTED_MODULE_5__student_creation_student_creation_component__["a" /* StudentCreationComponent */] }
+    { path: 'buildstudent', component: __WEBPACK_IMPORTED_MODULE_5__student_creation_student_creation_component__["a" /* StudentCreationComponent */] },
+    { path: 'redirect', component: __WEBPACK_IMPORTED_MODULE_6__user_redirect_user_redirect_component__["a" /* UserRedirectComponent */] }
 ];
 var AppRoutingModule = (function () {
     function AppRoutingModule() {
@@ -279,12 +282,14 @@ AppComponent = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__class_creation_class_creation_component__ = __webpack_require__("../../../../../src/app/class-creation/class-creation.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__class_list_class_list_component__ = __webpack_require__("../../../../../src/app/class-list/class-list.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__homework_list_homework_list_component__ = __webpack_require__("../../../../../src/app/homework-list/homework-list.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__user_redirect_user_redirect_component__ = __webpack_require__("../../../../../src/app/user-redirect/user-redirect.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -324,7 +329,8 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_16__student_creation_student_creation_component__["a" /* StudentCreationComponent */],
             __WEBPACK_IMPORTED_MODULE_18__class_creation_class_creation_component__["a" /* ClassCreationComponent */],
             __WEBPACK_IMPORTED_MODULE_19__class_list_class_list_component__["a" /* ClassListComponent */],
-            __WEBPACK_IMPORTED_MODULE_20__homework_list_homework_list_component__["a" /* HomeworkListComponent */]
+            __WEBPACK_IMPORTED_MODULE_20__homework_list_homework_list_component__["a" /* HomeworkListComponent */],
+            __WEBPACK_IMPORTED_MODULE_21__user_redirect_user_redirect_component__["a" /* UserRedirectComponent */]
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
@@ -337,7 +343,8 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_17_ng_sidebar__["SidebarModule"].forRoot(),
             __WEBPACK_IMPORTED_MODULE_7__angular_material__["a" /* MatButtonModule */],
             __WEBPACK_IMPORTED_MODULE_7__angular_material__["b" /* MatCheckboxModule */],
-            __WEBPACK_IMPORTED_MODULE_7__angular_material__["c" /* MatSidenavModule */]
+            __WEBPACK_IMPORTED_MODULE_7__angular_material__["d" /* MatSidenavModule */],
+            __WEBPACK_IMPORTED_MODULE_7__angular_material__["c" /* MatProgressBarModule */]
         ],
         providers: [],
         bootstrap: [__WEBPACK_IMPORTED_MODULE_9__app_component__["a" /* AppComponent */]]
@@ -522,7 +529,7 @@ var ClassListComponent = (function () {
 }());
 ClassListComponent = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'app-class-list',
+        selector: 'class-list',
         template: __webpack_require__("../../../../../src/app/class-list/class-list.component.html"),
         styles: [__webpack_require__("../../../../../src/app/class-list/class-list.component.scss")]
     }),
@@ -870,7 +877,7 @@ var StudentCenterComponent = (function () {
 }());
 StudentCenterComponent = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'app-student-center',
+        selector: 'student-center',
         template: __webpack_require__("../../../../../src/app/student-center/student-center.component.html"),
         styles: [__webpack_require__("../../../../../src/app/student-center/student-center.component.css")],
         providers: [__WEBPACK_IMPORTED_MODULE_1__user_service__["a" /* UserService */]]
@@ -904,7 +911,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/student-creation/student-creation.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\n\t<div class=\"row\"><div class=\"col s12\"><h1>Create a new user!</h1></div></div>\n\t<div class=\"row\">\n\t\t\t<form class=\"col s12\" #form=\"ngForm\" (ngSubmit)=\"onSubmitAddVideo(form.value)\">\n\n\t\t\t\t<div class=\"row\">\n\t\t\t\t\t<div class=\"input-field col s6\">\n\t\t\t\t\t\t\t<i class=\"material-icons prefix\">account_circle</i>\n\t\t\t\t\t\t<input id=\"first_name\" type=\"text\" class=\"validate\" required name=\"firstname\" ngModel>\n\t\t\t\t\t\t<label for=\"first_name\">First Name</label>\n\t\t\t\t\t</div>\n\t\t\t\t\t\n\t\t\t\t\t<div class=\"input-field col s6\">\n\t\t\t\t\t\t<input id=\"last_name\" type=\"text\" class=\"validate\" required name=\"lastname\" ngModel>\n\t\t\t\t\t\t<label for=\"last_name\">Last Name</label>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t\n\t\t\t\t<div class=\"row\">\n\t\t\t\t\t<div class=\"input-field col s12\">\n\t\t\t\t\t\t<i class=\"material-icons prefix\">email</i>\n\t\t\t\t\t\t<input id=\"email\" type=\"email\" class=\"validate\" required name=\"email\" ngModel>\n\t\t\t\t\t\t<label for=\"email\" data-error=\"try again\" data-success=\"yep, you didn't screw up\">Email</label>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\n\t\t\t\t<p>\n\t\t\t\t\t\t<input name=\"group1\" type=\"radio\" id=\"test1\" required name=\"type\" ngModel value=\"admin\"/>\n\t\t\t\t\t\t<label for=\"test1\">Admin</label>\n\t\t\t\t\t</p>\n\t\t\t\t\t<p>\n\t\t\t\t\t\t<input name=\"group1\" type=\"radio\" id=\"test2\" required name=\"type\" ngModel value=\"teacher\"/>\n\t\t\t\t\t\t<label for=\"test2\">Teacher</label>\n\t\t\t\t\t</p>\n\t\t\t\t\t<p>\n\t\t\t\t\t\t<input class=\"with-gap\" name=\"group1\" type=\"radio\" id=\"test3\" required name=\"type\" ngModel value=\"student\"/>\n\t\t\t\t\t\t<label for=\"test3\">Student</label>\n\t\t\t\t\t</p>\n\t\t\t\t\t<a class=\"waves-effect waves-light btn\"><i class=\"material-icons right\">cloud</i>button</a>\n\t\t\t</form>\n\n\t</div>\n</div>\n\n<form #form=\"ngForm\" (ngSubmit)=\"onSubmitAddVideo(form.value)\" class=\"well\">\n\t\t<div class=\"form-group\">\n\t\t\t<label>Title</label>\n\t\t\t<input type=\"text\" class=\"form-control\" required name=\"title\" ngModel>\n\t\t</div>\n\t\t<div class=\"form-group\">\n\t\t\t<label>Url</label>\n\t\t\t<input type=\"text\" class=\"form-control\" required name=\"url\" ngModel>\n\t\t</div>\n\t\t<div class=\"form-group\">\n\t\t\t<label>Description</label>\n\t\t\t<input type=\"text\" class=\"form-control\" name=\"description\" ngModel>\n\t\t</div>\n\t\t<button type=\"submit\" class=\"btn btn-success\">Save</button>\n\t</form>"
+module.exports = "<div class=\"container\">\n\t<div class=\"row\"><div class=\"col s12\"><h1>Create a new user!</h1></div></div>\n\t<div class=\"row\">\n\t\t\t<form class=\"col s12\" #form=\"ngForm\" (ngSubmit)=\"onSubmitAddVideo(form.value)\">\n\n\t\t\t\t<div class=\"row\">\n\t\t\t\t\t<div class=\"input-field col s6\">\n\t\t\t\t\t\t\t<i class=\"material-icons prefix\">account_circle</i>\n\t\t\t\t\t\t<input id=\"first_name\" type=\"text\" class=\"validate\" required name=\"firstname\" ngModel>\n\t\t\t\t\t\t<label for=\"first_name\">First Name</label>\n\t\t\t\t\t</div>\n\t\t\t\t\t\n\t\t\t\t\t<div class=\"input-field col s6\">\n\t\t\t\t\t\t<input id=\"last_name\" type=\"text\" class=\"validate\" required name=\"lastname\" ngModel>\n\t\t\t\t\t\t<label for=\"last_name\">Last Name</label>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t\n\t\t\t\t<div class=\"row\">\n\t\t\t\t\t<div class=\"input-field col s12\">\n\t\t\t\t\t\t<i class=\"material-icons prefix\">email</i>\n\t\t\t\t\t\t<input id=\"email\" type=\"email\" class=\"validate\" required name=\"email\" ngModel>\n\t\t\t\t\t\t<label for=\"email\" data-error=\"try again\" data-success=\"yep, you didn't screw up\">Email</label>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\n\t\t\t\t<p>\n\t\t\t\t\t\t<input name=\"group1\" type=\"radio\" id=\"test1\" required name=\"type\" ngModel value=\"admin\"/>\n\t\t\t\t\t\t<label for=\"test1\">Admin</label>\n\t\t\t\t\t</p>\n\t\t\t\t\t<p>\n\t\t\t\t\t\t<input name=\"group1\" type=\"radio\" id=\"test2\" required name=\"type\" ngModel value=\"teacher\"/>\n\t\t\t\t\t\t<label for=\"test2\">Teacher</label>\n\t\t\t\t\t</p>\n\t\t\t\t\t<p>\n\t\t\t\t\t\t<input class=\"with-gap\" name=\"group1\" type=\"radio\" id=\"test3\" required name=\"type\" ngModel value=\"student\"/>\n\t\t\t\t\t\t<label for=\"test3\">Student</label>\n\t\t\t\t\t</p>\n\t\t\t\t\t<a class=\"waves-effect waves-light btn\"><i class=\"material-icons right\">cloud</i>Submit</a>\n\t\t\t</form>\n\n\t</div>\n</div>"
 
 /***/ }),
 
@@ -985,6 +992,67 @@ StudentCreationComponent = __decorate([
 
 var _a;
 //# sourceMappingURL=student-creation.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/user-redirect/user-redirect.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/user-redirect/user-redirect.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"container\">\n\t<div class=\"row center-align\">\n\t\t<div class=\"col s12 \">\n\t\t\t<h3>Welcome to Rebootcampspot!</h3>\n\t\t</div>\n\t</div>\n\t<div class=\"row center-align\">\n\t\t<div class=\"col s12\">\n\t\t\t<mat-progress-bar\tmode=\"indeterminate\">\n\t\t\t</mat-progress-bar>\n\t\t</div>\n\t<div class=\"row center-align\">\n\t\t<div class=\"col s12\">\n\t\t\t<p>Please be patient</p>\n\t\t</div>\n\t</div>\n</div>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/user-redirect/user-redirect.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UserRedirectComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var UserRedirectComponent = (function () {
+    function UserRedirectComponent() {
+    }
+    UserRedirectComponent.prototype.ngOnInit = function () {
+    };
+    return UserRedirectComponent;
+}());
+UserRedirectComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-user-redirect',
+        template: __webpack_require__("../../../../../src/app/user-redirect/user-redirect.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/user-redirect/user-redirect.component.css")]
+    }),
+    __metadata("design:paramtypes", [])
+], UserRedirectComponent);
+
+//# sourceMappingURL=user-redirect.component.js.map
 
 /***/ }),
 

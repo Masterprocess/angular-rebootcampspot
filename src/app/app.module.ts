@@ -6,7 +6,7 @@ import { MaterializeModule } from 'angular2-materialize';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CalendarModule } from 'angular-calendar';
 import { Observable } from 'rxjs/Rx';
-import { MatSidenavModule, MatButtonModule, MatCheckboxModule } from '@angular/material';
+import { MatSidenavModule, MatButtonModule, MatCheckboxModule, MatProgressBarModule } from '@angular/material';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -23,6 +23,7 @@ import { SidebarModule } from 'ng-sidebar';
 import { ClassCreationComponent } from './class-creation/class-creation.component';
 import { ClassListComponent } from './class-list/class-list.component';
 import { HomeworkListComponent } from './homework-list/homework-list.component';
+import { UserRedirectComponent } from './user-redirect/user-redirect.component';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import { HomeworkListComponent } from './homework-list/homework-list.component';
 		StudentCreationComponent,
 		ClassCreationComponent,
 		ClassListComponent,
-		HomeworkListComponent
+		HomeworkListComponent,
+		UserRedirectComponent
 
   ],
   imports: [
@@ -51,7 +53,8 @@ import { HomeworkListComponent } from './homework-list/homework-list.component';
 		SidebarModule.forRoot(),
 		MatButtonModule,
 		MatCheckboxModule,
-		MatSidenavModule
+		MatSidenavModule,
+		MatProgressBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
