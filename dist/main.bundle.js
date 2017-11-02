@@ -935,7 +935,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/homework-detail-teacher/homework-detail-teacher.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\n<div>  \n        <h3>{{homework.title}}</h3>     \n\n        <div class=\"input-field col s12\">{{homework.cohort}}\n\t\t\t\t</div>\n\t\t\t\t<div class=\"input-field col s12\">{{homework.date}}\n\t\t\t\t</div>\n        <div class=\"input-field col s12\">{{homework.description}}\n\t\t\t\t</div>\n\t\t\t\t<mat-button-toggle>Check In!!</mat-button-toggle>\n</div>"
+module.exports = "\n<div>  \n        <h3 class=\"center-align\">{{homework.title}}</h3>     \n\n        <div class=\"input-field col s12 center-align\">{{homework.cohort}}\n\t\t\t\t</div>\n\t\t\t\t<div class=\"input-field col s12 center-align\">{{homework.date}}\n\t\t\t\t</div>\n        <div class=\"input-field col s12 center-align\">{{homework.description}}\n\t\t\t\t</div>\n\t\t\t\t<div class=\"center-align\" style=\"margin-top:20px;\">\n\t\t\t\t<mat-button-toggle>Check In!!</mat-button-toggle>\n\t\t\t\t</div>\n</div>"
 
 /***/ }),
 
