@@ -33,10 +33,14 @@ import { HomeworkDetailComponent } from './homework-detail/homework-detail.compo
 import { LessonDetailComponent } from './lesson-detail/lesson-detail.component';
 import { CohortListComponent } from './cohort-list/cohort-list.component';
 import { MainFooterComponent } from './main-footer/main-footer.component';
+
 import { HomeworkListTeacherComponent } from './homework-list-teacher/homework-list-teacher.component';
 import { LessonListTeacherComponent } from './lesson-list-teacher/lesson-list-teacher.component';
 import { HomeworkDetailTeacherComponent } from './homework-detail-teacher/homework-detail-teacher.component';
 import { LessonDetailTeacherComponent } from './lesson-detail-teacher/lesson-detail-teacher.component';
+import { CheckInComponent } from './check-in/check-in.component';
+import { AnnouncementsComponent } from './announcements/announcements.component';
+
 
 
 @NgModule({
@@ -59,6 +63,8 @@ import { LessonDetailTeacherComponent } from './lesson-detail-teacher/lesson-det
 		CohortCreateComponent,
 		LessonCreateComponent,
 		HomeworkCreateComponent,
+		CheckInComponent,
+		AnnouncementsComponent,
 		LessonListComponent,
 		CohortDetailComponent,
 		UserDetailComponent,
@@ -70,6 +76,7 @@ import { LessonDetailTeacherComponent } from './lesson-detail-teacher/lesson-det
 		LessonListTeacherComponent,
 		HomeworkDetailTeacherComponent,
 		LessonDetailTeacherComponent
+
   ],
   imports: [
     BrowserModule,
