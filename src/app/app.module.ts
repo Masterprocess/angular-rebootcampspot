@@ -59,7 +59,7 @@ import { MainFooterComponent } from './main-footer/main-footer.component';
 		UserDetailComponent,
 		HomeworkDetailComponent,
 		LessonDetailComponent,
-		CohortListComponent
+		CohortListComponent,
 		MainFooterComponent
   ],
   imports: [
