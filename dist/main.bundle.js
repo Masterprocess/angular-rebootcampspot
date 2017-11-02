@@ -38,7 +38,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/admin-center/admin-center.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\n\t<div class=\"row\">\n\n\t\t<div class=\"col s12 m7\">\n\t\t\t\t<h3 class=\"header\">User Creation</h3>\n\t\t\t\t<div class=\"card horizontal\">\n\t\t\t\t\t<div class=\"card-image\">\n\t\t\t\t\t\t<img src=\"https://lorempixel.com/100/190/nature/6\">\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"card-stacked\">\n\t\t\t\t\t\t<div class=\"card-content\">\n\t\t\t\t\t\t\t<p>Create a user here!</p>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"card-action\">\n\t\t\t\t\t\t\t\t<a class=\"waves-effect waves-light btn\" routerLink=\"/usercreate\" routerLinkActive=\"active\">Create a user</a>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\n\t\t<div class=\"col s12 m5\">\n\t\t\t\t<h3 class=\"header\">Cohort Creation</h3>\n\t\t\t\t<div class=\"card horizontal\">\n\t\t\t\t\t<div class=\"card-image\">\n\t\t\t\t\t\t<img src=\"https://lorempixel.com/100/190/nature/6\">\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"card-stacked\">\n\t\t\t\t\t\t<div class=\"card-content\">\n\t\t\t\t\t\t\t<p>Create a cohort here!</p>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"card-action\">\n\t\t\t\t\t\t\t\t<a class=\"waves-effect waves-light btn\" routerLink=\"/cohortcreate\" routerLinkActive=\"active\">Create a cohort</a>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\n\t</div>\n\n\t<div class=\"row\">\n\t\t\t\n\t\t\t<div class=\"col s12 m7\">\n\t\t\t\t\t<h3 class=\"header\">Lesson Creation</h3>\n\t\t\t\t\t<div class=\"card horizontal\">\n\t\t\t\t\t\t<div class=\"card-image\">\n\t\t\t\t\t\t\t<img src=\"https://lorempixel.com/100/190/nature/6\">\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"card-stacked\">\n\t\t\t\t\t\t\t<div class=\"card-content\">\n\t\t\t\t\t\t\t\t<p>Create a lesson here!</p>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class=\"card-action\">\n\t\t\t\t\t\t\t\t\t<a class=\"waves-effect waves-light btn\" routerLink=\"/lessoncreate\" routerLinkActive=\"active\">Create a lesson</a>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\n\t\t\t<div class=\"col s12 m5\">\n\t\t\t\t\t<h3 class=\"header\">Homework Creation</h3>\n\t\t\t\t\t<div class=\"card horizontal\">\n\t\t\t\t\t\t<div class=\"card-image\">\n\t\t\t\t\t\t\t<img src=\"https://lorempixel.com/100/190/nature/6\">\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"card-stacked\">\n\t\t\t\t\t\t\t<div class=\"card-content\">\n\t\t\t\t\t\t\t\t<p>Create a homework here!</p>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class=\"card-action\">\n\t\t\t\t\t\t\t\t\t<a class=\"waves-effect waves-light btn\" routerLink=\"/homeworkcreate\" routerLinkActive=\"active\">Create a homework</a>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\n\t\t</div>\n</div>\n\n\n\n"
+module.exports = "\n<div class=\"container\">\n\t<div class=\"row\">\n\n\n\t\t<div class=\"col s12 m7\">\n\t\t\t\t<h3 class=\"header\">User Creation</h3>\n\t\t\t\t<div class=\"card horizontal\">\n\t\t\t\t\t<div class=\"card-image\">\n\t\t\t\t\t\t<img src=\"https://lorempixel.com/100/190/nature/6\">\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"card-stacked\">\n\t\t\t\t\t\t<div class=\"card-content\">\n\t\t\t\t\t\t\t<p>Create a user here!</p>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"card-action\">\n\t\t\t\t\t\t\t\t<a class=\"waves-effect waves-light btn\" routerLink=\"/usercreate\" routerLinkActive=\"active\">Create a user</a>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\n\t\t<div class=\"col s12 m5\">\n\t\t\t\t<h3 class=\"header\">Cohort Creation</h3>\n\t\t\t\t<div class=\"card horizontal\">\n\t\t\t\t\t<div class=\"card-image\">\n\t\t\t\t\t\t<img src=\"https://lorempixel.com/100/190/nature/6\">\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"card-stacked\">\n\t\t\t\t\t\t<div class=\"card-content\">\n\t\t\t\t\t\t\t<p>Create a cohort here!</p>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"card-action\">\n\t\t\t\t\t\t\t\t<a class=\"waves-effect waves-light btn\" routerLink=\"/cohortcreate\" routerLinkActive=\"active\">Create a cohort</a>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\n\t</div>\n\n\t<div class=\"row\">\n\t\t\t\n\t\t\t<div class=\"col s12 m7\">\n\t\t\t\t\t<h3 class=\"header\">Lesson Creation</h3>\n\t\t\t\t\t<div class=\"card horizontal\">\n\t\t\t\t\t\t<div class=\"card-image\">\n\t\t\t\t\t\t\t<img src=\"https://lorempixel.com/100/190/nature/6\">\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"card-stacked\">\n\t\t\t\t\t\t\t<div class=\"card-content\">\n\t\t\t\t\t\t\t\t<p>Create a lesson here!</p>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class=\"card-action\">\n\t\t\t\t\t\t\t\t\t<a class=\"waves-effect waves-light btn\" routerLink=\"/lessoncreate\" routerLinkActive=\"active\">Create a lesson</a>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\n\t\t\t<div class=\"col s12 m5\">\n\t\t\t\t\t<h3 class=\"header\">Homework Creation</h3>\n\t\t\t\t\t<div class=\"card horizontal\">\n\t\t\t\t\t\t<div class=\"card-image\">\n\t\t\t\t\t\t\t<img src=\"https://lorempixel.com/100/190/nature/6\">\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"card-stacked\">\n\t\t\t\t\t\t\t<div class=\"card-content\">\n\t\t\t\t\t\t\t\t<p>Create a homework here!</p>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class=\"card-action\">\n\t\t\t\t\t\t\t\t\t<a class=\"waves-effect waves-light btn\" routerLink=\"/homeworkcreate\" routerLinkActive=\"active\">Create a homework</a>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\n\t\t</div>\n</div>\n\n\n\n"
 
 /***/ }),
 
@@ -75,6 +75,67 @@ AdminCenterComponent = __decorate([
 ], AdminCenterComponent);
 
 //# sourceMappingURL=admin-center.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/announcements/announcements.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/announcements/announcements.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"col s12\">\n  <ul class=\"collection with-header hoverable\">\n      <li class=\"collection-header\"><h5>Announcements<span class=\"btn large right\">1 new</span></h5></li>\n      <li class=\"collection-item avatar\">\n        <i class=\"material-icons circle\">account_box</i>\n        <span class=\"title\">Subject</span>\n        <p>Author <br>\n          Message <br>\n          fsdvsdvsd\n        </p>\n      </li>\n      <li class=\"collection-item avatar\">\n          <i class=\"material-icons circle\">account_box</i>\n        <span class=\"title\">Subject</span>\n        <p>Author <br>\n          Message\n        </p>\n        <a class=\"secondary-content\"><i class=\"material-icons medium\">error</i></a>\n      </li>\n      <li class=\"collection-item avatar\">\n        <i class=\"material-icons circle\">account_box</i>\n        <span class=\"title\">Subject</span>\n        <p>Author <br>\n          Message\n        </p>\n      </li>\n      <li class=\"collection-item avatar\">\n        <i class=\"material-icons circle\">account_box</i>\n        <span class=\"title\">Subject</span>\n        <p>Author <br>\n          Message\n        </p>\n      </li>\n    </ul>\n  </div>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/announcements/announcements.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AnnouncementsComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var AnnouncementsComponent = (function () {
+    function AnnouncementsComponent() {
+    }
+    AnnouncementsComponent.prototype.ngOnInit = function () {
+    };
+    return AnnouncementsComponent;
+}());
+AnnouncementsComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+        selector: 'app-announcements',
+        template: __webpack_require__("../../../../../src/app/announcements/announcements.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/announcements/announcements.component.css")]
+    }),
+    __metadata("design:paramtypes", [])
+], AnnouncementsComponent);
+
+//# sourceMappingURL=announcements.component.js.map
 
 /***/ }),
 
@@ -244,12 +305,16 @@ AppComponent = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_34__lesson_list_teacher_lesson_list_teacher_component__ = __webpack_require__("../../../../../src/app/lesson-list-teacher/lesson-list-teacher.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_35__homework_detail_teacher_homework_detail_teacher_component__ = __webpack_require__("../../../../../src/app/homework-detail-teacher/homework-detail-teacher.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_36__lesson_detail_teacher_lesson_detail_teacher_component__ = __webpack_require__("../../../../../src/app/lesson-detail-teacher/lesson-detail-teacher.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_37__check_in_check_in_component__ = __webpack_require__("../../../../../src/app/check-in/check-in.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_38__announcements_announcements_component__ = __webpack_require__("../../../../../src/app/announcements/announcements.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
 
 
 
@@ -313,6 +378,8 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_23__cohort_create_cohort_create_component__["a" /* CohortCreateComponent */],
             __WEBPACK_IMPORTED_MODULE_24__lesson_create_lesson_create_component__["a" /* LessonCreateComponent */],
             __WEBPACK_IMPORTED_MODULE_25__homework_create_homework_create_component__["a" /* HomeworkCreateComponent */],
+            __WEBPACK_IMPORTED_MODULE_37__check_in_check_in_component__["a" /* CheckInComponent */],
+            __WEBPACK_IMPORTED_MODULE_38__announcements_announcements_component__["a" /* AnnouncementsComponent */],
             __WEBPACK_IMPORTED_MODULE_26__lesson_list_lesson_list_component__["a" /* LessonListComponent */],
             __WEBPACK_IMPORTED_MODULE_27__cohort_detail_cohort_detail_component__["a" /* CohortDetailComponent */],
             __WEBPACK_IMPORTED_MODULE_28__user_detail_user_detail_component__["a" /* UserDetailComponent */],
@@ -344,6 +411,67 @@ AppModule = __decorate([
 ], AppModule);
 
 //# sourceMappingURL=app.module.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/check-in/check-in.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/check-in/check-in.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"col s12 m6\">\n    <div class=\"card small sticky-action hoverable\">\n\n      <div class=\"card-content\">\n          <span class=\"card-title activator grey-text text-darken-4\">Next Lesson<i class=\"material-icons right\">more_vert</i></span>\n          <p>Nov. 2, 2017</p>\n        </div>\n      <div class=\"card-reveal\">\n          <span class=\"card-title grey-text text-darken-4\">Card Title<i class=\"material-icons right\">close</i></span>\n          <p>This is the next class and the date or something and what the lesson is going to be about</p>\n        </div>\n      <div class=\"card-action\">\n        <span><a href=\"#\"class=\"btn disabled\">Check In</a></span>\n        <a href=\"#\" class=\"right\">Request Absence</a>\n        <a href=\"#\" class=\"right\">Find A Tutor</a>\n      </div>\n    </div>\n  </div>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/check-in/check-in.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CheckInComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var CheckInComponent = (function () {
+    function CheckInComponent() {
+    }
+    CheckInComponent.prototype.ngOnInit = function () {
+    };
+    return CheckInComponent;
+}());
+CheckInComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+        selector: 'app-check-in',
+        template: __webpack_require__("../../../../../src/app/check-in/check-in.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/check-in/check-in.component.css")]
+    }),
+    __metadata("design:paramtypes", [])
+], CheckInComponent);
+
+//# sourceMappingURL=check-in.component.js.map
 
 /***/ }),
 
@@ -935,7 +1063,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/homework-detail-teacher/homework-detail-teacher.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\n<div>  \n        <h3>{{homework.title}}</h3>     \n\n        <div class=\"input-field col s12\">{{homework.cohort}}\n\t\t\t\t</div>\n\t\t\t\t<div class=\"input-field col s12\">{{homework.date}}\n\t\t\t\t</div>\n        <div class=\"input-field col s12\">{{homework.description}}\n\t\t\t\t</div>\n\t\t\t\t<mat-button-toggle>Check In!!</mat-button-toggle>\n</div>"
+module.exports = "\n<div>  \n        <h3 class=\"center-align\">{{homework.title}}</h3>     \n\n        <div class=\"input-field col s12 center-align\">{{homework.cohort}}\n\t\t\t\t</div>\n\t\t\t\t<div class=\"input-field col s12 center-align\">{{homework.date}}\n\t\t\t\t</div>\n        <div class=\"input-field col s12 center-align\">{{homework.description}}\n\t\t\t\t</div>\n\t\t\t\t<div class=\"center-align\" style=\"margin-top:20px;\">\n\t\t\t\t<mat-button-toggle>Check In!!</mat-button-toggle>\n\t\t\t\t</div>\n</div>"
 
 /***/ }),
 
@@ -1158,7 +1286,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/homework-list/homework-list.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<ul class=\"nav nav-pills nav-stacked\">\n    <li (click)=\"onSelect(homework)\" *ngFor=\"let homework of homeworks\"><a>{{homework.title}}</a></li>\n</ul>\n\n<!-- This part is Caroline's -->\n<!-- \n<div class=\"col s12 m6\">\n      <div class=\"card blue-grey darken-1\">\n          <div class=\"card-content\">\n            <span class=\"card-title\">Homework</span>\n            <ul class=\"collapsible\" data-collapsible=\"accordion\">\n                <li>\n                  <div class=\"collapsible-header\"><i class=\"material-icons\">filter_drama</i>Homework 1</div>\n                  <div class=\"collapsible-body\"><span>Lorem ipsum dolor sit amet.</span></div>\n                </li>\n                <li>\n                  <div class=\"collapsible-header\"><i class=\"material-icons\">place</i>Homework 2</div>\n                  <div class=\"collapsible-body\"><span>Lorem ipsum dolor sit amet.</span></div>\n                </li>\n                <li>\n                  <div class=\"collapsible-header\"><i class=\"material-icons\">whatshot</i>Homework 3</div>\n                  <div class=\"collapsible-body\"><span>Lorem ipsum dolor sit amet.</span></div>\n                </li>\n              </ul>\n          </div>\n          <div class=\"card-action\">\n            <a href=\"#\">This is a link</a>\n            <a href=\"#\">This is a link</a>\n          </div>\n      </div>\n  </div> -->"
+module.exports = "<ul class=\"nav nav-pills nav-stacked\">\n    <li (click)=\"onSelect(homework)\" *ngFor=\"let homework of homeworks\"><a>{{homework.title}}</a></li>\n</ul>\n\n<!-- This part is Caroline's -->\n<!-- \n<div class=\"col s12 m6\">\n      <div class=\"card hoverable\">\n          <div class=\"card-content\">\n            <span class=\"card-title\">Homework</span>\n            <ul class=\"collapsible\" data-collapsible=\"accordion\">\n                <li>\n                  <div class=\"collapsible-header\">\n                    Homework 1\n                    <span><i class=\"material-icons\">arrow_drop_down</i></span>\n                  </div>\n                  <div class=\"collapsible-body\">\n                    <span>Lorem ipsum dolor sit amet.</span>\n                    <div class=\"card-action\">\n                        <a href=\"#\">Submit Homework</a>\n                        <a href=\"#\">View Feedback</a>\n                    </div>\n                  </div>\n                </li>\n                <li>\n                  <div class=\"collapsible-header\">\n                    Homework 2\n                    <span><i class=\"material-icons\">arrow_drop_down</i></span>\n                  </div>\n                  <div class=\"collapsible-body\">\n                    <span>Lorem ipsum dolor sit amet.</span>\n                    <div class=\"card-action\">\n                        <a href=\"#\">Submit Homework</a>\n                        <a href=\"#\">View Feedback</a>\n                    </div>\n                  </div>\n                </li>\n                <li>\n                  <div class=\"collapsible-header\">\n                    Homework 3\n                    <span><i class=\"material-icons\">arrow_drop_down</i></span>\n                  </div>\n                  <div class=\"collapsible-body\">\n                    <span>Lorem ipsum dolor sit amet.</span>\n                    <div class=\"card-action\">\n                        <a href=\"#\">Submit Homework</a>\n                        <a href=\"#\">View Feedback</a>\n                    </div>\n                  </div>\n                </li>\n              </ul>\n          </div>\n\t\t\t\t-->"
 
 /***/ }),
 
@@ -1953,7 +2081,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/student-center/student-center.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  student-center works!\n</p>\n<div class=\"row\">\n  <homework-list></homework-list>\n</div>\n\n<app-main-footer></app-main-footer>"
+module.exports = "<div class=\"row\">\n  <app-check-in></app-check-in>\n  <homework-list></homework-list>\n</div>\n<div class=\"row\">\n    <app-announcements></app-announcements>\n  </div>\n  \n\n<app-main-footer></app-main-footer>"
 
 /***/ }),
 
@@ -2834,7 +2962,7 @@ var Video = (function () {
 /***/ "../../../../../src/assets/images/parallax15.jpg":
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "parallax15.4ab74623896cc5d90264.jpg";
+module.exports = __webpack_require__.p + "parallax15.2db16c5a8d548898fabd.jpg";
 
 /***/ }),
 
