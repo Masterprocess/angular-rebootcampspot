@@ -1,3 +1,8 @@
+<ul class="nav nav-pills nav-stacked">
+    <li (click)="onSelect(homework)" *ngFor="let homework of homeworks"><a>{{homework.title}}</a></li>
+</ul>
+
+<!-- This part is Caroline's -->
 <div class="col s12 m6">
       <div class="card hoverable">
           <div class="card-content">
@@ -48,6 +53,3 @@
              -->
       </div>
   </div>
-
-
-      

@@ -7,7 +7,7 @@ const homeworkSchema = new Schema({
     description: String,
 		cohort: String,
 		due: Date,
-		hwlink: Array,
+		//hwlink: [String],
 		//comments: [{user: string, comment: string}]
 });
 

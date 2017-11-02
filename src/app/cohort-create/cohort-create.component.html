@@ -1,3 +1,31 @@
-<p>
-  cohort-create works!
-</p>
+<div class="row">
+		<div class="col-sm-9">
+			<div *ngIf="!hidenewCohort">
+				<h2>New Cohort</h2>
+				<form #form="ngForm" (ngSubmit)="onSubmitAddCohort(form.value)" class="well">
+					<div class="form-group">
+						<label>Title</label>
+						<input type="text" class="form-control" required name="title" ngModel>
+					</div>
+					<div class="form-group">
+						<label>Url</label>
+						<input type="text" class="form-control" required name="url" ngModel>
+					</div>
+					<div class="form-group">
+						<label>Description</label>
+						<input type="text" class="form-control" name="description" ngModel>
+					</div>
+					<button type="submit" class="btn btn-success">Save</button>
+				</form>
+			</div>
+			<cohort-detail *ngIf="selectedCohort && hidenewCohort" 
+			(updateCohortEvent)="onUpdateCohortEvent($event)" 
+			(deleteCohortEvent)="onDeleteCohortEvent($event)"
+			 [cohort]="selectedCohort">
+			</cohort-detail>
+		</div>
+		<div class="col-sm-3">
+			<button style="margin-bottom:2px;" type="button" (click)="newCohort()" class="btn btn-success btn-block">+ New Cohort</button>
+			<cohort-list [cohorts]="cohorts" (SelectCohort)="onSelectCohort($event)"></cohort-list>
+		</div>
+	</div>
