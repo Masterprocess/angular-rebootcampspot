@@ -27,6 +27,8 @@ import { CohortCreateComponent } from './cohort-create/cohort-create.component';
 import { LessonCreateComponent } from './lesson-create/lesson-create.component';
 import { HomeworkCreateComponent } from './homework-create/homework-create.component';
 import { MainFooterComponent } from './main-footer/main-footer.component';
+import { CheckInComponent } from './check-in/check-in.component';
+import { AnnouncementsComponent } from './announcements/announcements.component';
 
 
 @NgModule({
@@ -50,7 +52,9 @@ import { MainFooterComponent } from './main-footer/main-footer.component';
 		CohortCreateComponent,
 		LessonCreateComponent,
 		HomeworkCreateComponent,
-		MainFooterComponent
+		MainFooterComponent,
+		CheckInComponent,
+		AnnouncementsComponent
   ],
   imports: [
     BrowserModule,
