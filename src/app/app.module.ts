@@ -32,6 +32,8 @@ import { HomeworkDetailComponent } from './homework-detail/homework-detail.compo
 import { LessonDetailComponent } from './lesson-detail/lesson-detail.component';
 import { CohortListComponent } from './cohort-list/cohort-list.component';
 import { MainFooterComponent } from './main-footer/main-footer.component';
+import { CheckInComponent } from './check-in/check-in.component';
+import { AnnouncementsComponent } from './announcements/announcements.component';
 
 
 @NgModule({
@@ -54,6 +56,8 @@ import { MainFooterComponent } from './main-footer/main-footer.component';
 		CohortCreateComponent,
 		LessonCreateComponent,
 		HomeworkCreateComponent,
+		CheckInComponent,
+		AnnouncementsComponent
 		LessonListComponent,
 		CohortDetailComponent,
 		UserDetailComponent,
@@ -61,6 +65,7 @@ import { MainFooterComponent } from './main-footer/main-footer.component';
 		LessonDetailComponent,
 		CohortListComponent
 		MainFooterComponent
+
   ],
   imports: [
     BrowserModule,
