@@ -2,9 +2,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { RouterModule } from '@angular/router'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterializeModule } from 'angular2-materialize';
-import { MatSidenavModule, MatButtonModule, MatCheckboxModule, MatProgressBarModule } from '@angular/material';
+import { MatSidenavModule, MatButtonModule, MatCheckboxModule, MatProgressBarModule, MatButtonToggleModule } from '@angular/material';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -32,8 +33,14 @@ import { HomeworkDetailComponent } from './homework-detail/homework-detail.compo
 import { LessonDetailComponent } from './lesson-detail/lesson-detail.component';
 import { CohortListComponent } from './cohort-list/cohort-list.component';
 import { MainFooterComponent } from './main-footer/main-footer.component';
+
+import { HomeworkListTeacherComponent } from './homework-list-teacher/homework-list-teacher.component';
+import { LessonListTeacherComponent } from './lesson-list-teacher/lesson-list-teacher.component';
+import { HomeworkDetailTeacherComponent } from './homework-detail-teacher/homework-detail-teacher.component';
+import { LessonDetailTeacherComponent } from './lesson-detail-teacher/lesson-detail-teacher.component';
 import { CheckInComponent } from './check-in/check-in.component';
 import { AnnouncementsComponent } from './announcements/announcements.component';
+
 
 
 @NgModule({
@@ -64,7 +71,11 @@ import { AnnouncementsComponent } from './announcements/announcements.component'
 		HomeworkDetailComponent,
 		LessonDetailComponent,
 		CohortListComponent,
-		MainFooterComponent
+		MainFooterComponent,
+		HomeworkListTeacherComponent,
+		LessonListTeacherComponent,
+		HomeworkDetailTeacherComponent,
+		LessonDetailTeacherComponent
 
   ],
   imports: [
@@ -77,7 +88,8 @@ import { AnnouncementsComponent } from './announcements/announcements.component'
 		MatSidenavModule, 
 		MatButtonModule, 
 		MatCheckboxModule, 
-		MatProgressBarModule
+		MatProgressBarModule,
+		MatButtonToggleModule
   ],
   providers: [],
   bootstrap: [AppComponent]

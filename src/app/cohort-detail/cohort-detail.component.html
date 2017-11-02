@@ -1,25 +1,18 @@
-<div>
-    <iframe width="100%" height="500" [src]="cohort.url | safe" frameborder="0" allowfullscreen>
-    </iframe>
-</div>
+
 <div>
     <form>  
         <h3 *ngIf="!editTitle" (click)="onTitleClick()">{{cohort.title}}</h3>     
-        <div *ngIf="editTitle" class="form-group">
-            <input type="input" class="form-control" name="title" required placeholder="title"
+        <div *ngIf="editTitle" class="input-field col s12">
+            <input type="input"  name="title" required placeholder="title"
             [(ngModel)]="cohort.title">
         </div>
-        <div class="form-group">
-            <input type="input" class="form-control" name="url" required placeholder="url"
-            [(ngModel)]="cohort.url">
+        <div class="input-field col s12">
+            <input type="input"  name="program" required placeholder="unc"
+            [(ngModel)]="cohort.program">
         </div>
-        <div class="form-group">
-            <textarea class="form-control" rows="5" name="desc" [(ngModel)]="cohort.description">
-            </textarea>
-				</div>
 				<div style="margin-bottom: 50px;"> 
-        <button type="button" (click)="updateCohort()" class="btn btn-primary">Update</button>  
-				<button type="button" (click)="deleteCohort()" class="btn btn-danger">Delete</button>
+        <a type="button" (click)="updateCohort()" class="btn waves-effect waves-light">Update<i class="material-icons right">send</i>>Update</a>  
+				<a type="button" (click)="deleteCohort()" class="btn waves-effect waves-light">Update<i class="material-icons right">send</i>>Delete</a>
 				</div>    
     </form>
 </div>

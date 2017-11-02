@@ -274,10 +274,10 @@ router.get('/homeworks/:id', function(req, res){
 router.post('/homework', function(req, res){
 	console.log('Post a homework');
 	var newHomework = new Homework();
-	newHomework.name = req.body.title;
+	newHomework.title = req.body.title;
 	newHomework.description = req.body.description;
-	newHomework.cohort = req.body.type;
-	newHomework.due = req.body.due;
+	newHomework.cohort = req.body.cohort;
+	newHomework.date = req.body.date;
 	//newHomework.hwlink = req.body.hwlink;
 	//newHomework.comments = req.body.comments;
 	newHomework.save(function(err, insertedHomework){
@@ -294,7 +294,7 @@ router.put('/homework/:id', function(req, res){
 	console.log('Update a homework');
 	Homework.findByIdAndUpdate(req.params.id,
 	{
-			$set: {title: req.body.title, description: req.body.description, cohort: req.body.cohort, due: req.body.due, hwlink: req.body.hwlink, comments: req.body.comments}
+			$set: {title: req.body.title, description: req.body.description, cohort: req.body.cohort, date: req.body.date, hwlink: req.body.hwlink, comments: req.body.comments}
 	},
 	{
 			new: true

@@ -3,6 +3,6 @@ export class Homework {
 	title: String;
 	description: String;
 	cohort: String;
-	due: Date;
+	date: Date;
 	//hwlink: [String];
 }
