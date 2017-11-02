@@ -57,13 +57,13 @@ import { AnnouncementsComponent } from './announcements/announcements.component'
 		LessonCreateComponent,
 		HomeworkCreateComponent,
 		CheckInComponent,
-		AnnouncementsComponent
+		AnnouncementsComponent,
 		LessonListComponent,
 		CohortDetailComponent,
 		UserDetailComponent,
 		HomeworkDetailComponent,
 		LessonDetailComponent,
-		CohortListComponent
+		CohortListComponent,
 		MainFooterComponent
 
   ],
