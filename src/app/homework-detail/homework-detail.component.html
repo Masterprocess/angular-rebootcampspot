@@ -1,25 +1,26 @@
-<div>
-    <iframe width="100%" height="500" [src]="homework.url | safe" frameborder="0" allowfullscreen>
-    </iframe>
-</div>
+
 <div>
     <form>  
         <h3 *ngIf="!editTitle" (click)="onTitleClick()">{{homework.title}}</h3>     
-        <div *ngIf="editTitle" class="form-group">
-            <input type="input" class="form-control" name="title" required placeholder="title"
+        <div *ngIf="editTitle" class="input-field col s12">
+            <input type="input"  name="title" required placeholder="title"
             [(ngModel)]="homework.title">
         </div>
-        <div class="form-group">
-            <input type="input" class="form-control" name="url" required placeholder="url"
-            [(ngModel)]="homework.url">
-        </div>
-        <div class="form-group">
-            <textarea class="form-control" rows="5" name="desc" [(ngModel)]="homework.description">
+        <div class="input-field col s12">
+            <input type="input"  name="cohort" required placeholder="unc"
+            [(ngModel)]="homework.cohort">
+				</div>
+				<div class="input-field col s12">
+            <input type="input"  name="date" required placeholder="10/29/2017"
+            [(ngModel)]="homework.date">
+				</div>
+        <div class="input-field col s12">
+            <textarea  rows="5" name="description" [(ngModel)]="homework.description">
             </textarea>
 				</div>
 				<div style="margin-bottom: 50px;"> 
-        <button type="button" (click)="updateHomework()" class="btn btn-primary">Update</button>  
-				<button type="button" (click)="deleteHomework()" class="btn btn-danger">Delete</button>
+        <a type="button" (click)="updateHomework()" class="btn waves-effect waves-light">Update<i class="material-icons right">send</i></a>  
+				<a type="button" (click)="deleteHomework()" class="btn waves-effect waves-light red">Delete<i class="material-icons right">delete</i></a>
 				</div>    
     </form>
 </div>

@@ -1,21 +1,21 @@
 <div class="row">
-		<div class="col-sm-9">
+		<div class="col s12 m9">
 			<div *ngIf="!hidenewLesson">
 				<h2>New Lesson</h2>
-				<form #form="ngForm" (ngSubmit)="onSubmitAddLesson(form.value)" class="well">
-					<div class="form-group">
+				<form #form="ngForm" (ngSubmit)="onSubmitAddLesson(form.value)" class="col s12 m12">
+					<div class"input-field col s12">
+						<input type="text"  required name="title" ngModel>
 						<label>Title</label>
-						<input type="text" class="form-control" required name="title" ngModel>
-					</div>
-					<div class="form-group">
-						<label>Url</label>
-						<input type="text" class="form-control" required name="url" ngModel>
-					</div>
-					<div class="form-group">
+					<div class"input-field col s12">
+						<input type="text"  required name="cohort" ngModel>
+						<label>Cohort</label>
+					<div class"input-field col s12">
+						<input type="text"  required name="date" ngModel>
+						<label>Due</label>
+					<div class"input-field col s12">				
+						<input type="text"  name="description" ngModel>
 						<label>Description</label>
-						<input type="text" class="form-control" name="description" ngModel>
-					</div>
-					<button type="submit" class="btn btn-success">Save</button>
+					<a type="submit" class="btn waves-effect waves-light">Save</a>
 				</form>
 			</div>
 			<lesson-detail *ngIf="selectedLesson && hidenewLesson" 
@@ -24,8 +24,8 @@
 			 [lesson]="selectedLesson">
 			</lesson-detail>
 		</div>
-		<div class="col-sm-3">
-			<button style="margin-bottom:2px;" type="button" (click)="newLesson()" class="btn btn-success btn-block">+ New Lesson</button>
+		<div class="col s12 m3">
+			<a style="margin-bottom:2px; margin-top:50px;" type="button" (click)="newLesson()" class="btn waves-effect waves-light">+ New Lesson</a>
 			<lesson-list [lessons]="lessons" (SelectLesson)="onSelectLesson($event)"></lesson-list>
 		</div>
 	</div>

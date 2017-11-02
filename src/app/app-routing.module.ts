@@ -7,6 +7,10 @@ import { AdminCenterComponent } from "./admin-center/admin-center.component";
 import { StudentCenterComponent } from "./student-center/student-center.component";
 import { TeacherCenterComponent } from "./teacher-center/teacher-center.component";
 import { UserRedirectComponent } from "./user-redirect/user-redirect.component";
+import { CohortCreateComponent } from './cohort-create/cohort-create.component';
+import { UserCreateComponent } from './user-create/user-create.component';
+import { LessonCreateComponent } from './lesson-create/lesson-create.component';
+import { HomeworkCreateComponent } from './homework-create/homework-create.component';
 
 
 const routes: Routes = [
@@ -17,7 +21,12 @@ const routes: Routes = [
 	{path: 'teachercenter', component: TeacherCenterComponent},
 	{path: 'redirect', component: UserRedirectComponent},
   {path: 'home', component: HomeComponent},
-  {path: 'videos', component: VideoCenterComponent}
+	{path: 'videos', component: VideoCenterComponent},
+	{path: 'cohortcreate', component: CohortCreateComponent},
+	{path: 'usercreate', component: UserCreateComponent},
+	{path: 'lessoncreate', component: LessonCreateComponent},
+	{path: 'homeworkcreate', component: HomeworkCreateComponent},
+	
 ];
 
 @NgModule({
