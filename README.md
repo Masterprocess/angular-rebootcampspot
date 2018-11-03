@@ -1,5 +1,11 @@
 # Rebootcampspot
 
+# DON'T RUN THIS
+
+Okay, this app needs some major TLC. Don't run this locally, though. There's some pretty major security issues with it. This was a team project, but there were so many issues with the code during development. Nobody was truly competent with Angular, so it suffered as a result. Soon, I'll likely rewrite the app to run in React and React-Native, and get the conditional rendering all up to snuff.
+
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.9.
 
 ## Development server
